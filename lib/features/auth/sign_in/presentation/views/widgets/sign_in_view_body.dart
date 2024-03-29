@@ -3,11 +3,13 @@ import 'package:fetra/core/utils/app_colors.dart';
 import 'package:fetra/core/utils/app_images.dart';
 import 'package:fetra/core/utils/app_styles.dart';
 import 'package:fetra/features/auth/sign_in/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../../core/utils/app_router.dart';
 import '../../../../../../generated/l10n.dart';
 import '../../view_model/sign_in_cubit/sign_in_state.dart';
 import 'custom_auth_button.dart';
@@ -120,6 +122,10 @@ class SignInViewBody extends StatelessWidget {
                       ),
                       text: S.of(context).subButton1),
                   TextSpan(
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        context.go(AppRouter.signUp);
+                      },
                     text: S.of(context).subButton11,
                     style: AppStyles.choiceSignOrText.copyWith(
                       fontWeight: FontWeight.bold,

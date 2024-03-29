@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../features/auth/sign_in/presentation/views/sign_in_view.dart';
 import '../../features/auth/sign_up/presentation/views/sign_up_view.dart';
+import '../../features/home/presentation/views/home_view.dart';
 import '../../features/on_boarding/presentation/views/choice_sign_view.dart';
 
 abstract class AppRouter {
@@ -39,12 +40,12 @@ abstract class AppRouter {
           return const SignInView();
         },
       ),
-      // GoRoute(
-      //   path: forgetPassView,
-      //   builder: (BuildContext context, GoRouterState state) {
-      //     return const ForgetPassView();
-      //   },
-      // ),
+      GoRoute(
+        path: forgetPassView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const HomeView();
+        },
+      ),
     ],
   );
 }
