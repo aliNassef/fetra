@@ -1,9 +1,10 @@
 import 'package:fetra/core/api/service_locator.dart';
-import 'package:fetra/features/auth/sign_in/data/repo/auth_repo_impl.dart';
+import 'package:fetra/features/auth/sign_in/data/repo/sign_in_repo_impl.dart';
 import 'package:fetra/features/auth/sign_up/presentation/view_model/cubit/sign_up_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../data/repo/sign_up_repo_impl.dart';
 import 'widgets/sign_up_view_body.dart';
 
 class SignUpView extends StatelessWidget {
@@ -17,6 +18,7 @@ class SignUpView extends StatelessWidget {
         child: AppBar(
           elevation: 0,
           systemOverlayStyle: const SystemUiOverlayStyle(
+            systemNavigationBarIconBrightness: Brightness.dark,
             statusBarColor: Color(0xff53B97C),
             // <-- SEE HERE
             statusBarIconBrightness: Brightness.light,
@@ -28,7 +30,7 @@ class SignUpView extends StatelessWidget {
         ),
       ),
       body: BlocProvider(
-        create: (context) => SignUpCubit(getIt.get<AuthRepoImpl>()),
+        create: (context) => SignUpCubit(getIt.get<SignUpRepoImpl>()),
         child: const SignUpViewBody(),
       ),
     );

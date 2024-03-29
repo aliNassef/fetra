@@ -4,12 +4,12 @@ import 'package:fetra/core/api/end_ponits.dart';
 import 'package:fetra/core/errors/exceptions.dart';
 import 'package:fetra/features/auth/sign_in/data/models/sign_in_model.dart';
 
-import 'auth_repo.dart';
+import 'sign_in_repo.dart';
 
-class AuthRepoImpl extends AuthRepo {
+class SignInRepoImpl extends SignInRepo {
   final ApiConsumer api;
 
-  AuthRepoImpl({required this.api});
+  SignInRepoImpl({required this.api});
 
   @override
   Future<Either<String, SignInModel>> loginUser(

@@ -27,17 +27,19 @@ class EndPoint {
 }
 
 class ApiKey {
+  static String age = 'age';
+  static String type = 'type';
   static String status = "status";
-  static String errorMessage = "ErrorMessage";
+ // static String errorMessage = "ErrorMessage";
   static String email = "email";
   static String password = "password";
   static String typeAccount = 'type_account';
   static String token = "token";
   static String message = "message";
-  static String id = "id";
+  // static String id = "id";
   static String name = "name";
   static String phone = "phone";
-  static String confirmPassword = "confirmPassword";
-  static String location = "location";
-  static String profilePic = "profilePic";
+  // static String confirmPassword = "confirmPassword";
+  // static String location = "location";
+  // static String profilePic = "profilePic";
 }

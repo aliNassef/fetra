@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 
 import '../models/sign_in_model.dart';
 
-abstract class AuthRepo {
+abstract class SignInRepo {
   Future<Either<String, SignInModel>> loginUser({
     required String email,
     required String password,
