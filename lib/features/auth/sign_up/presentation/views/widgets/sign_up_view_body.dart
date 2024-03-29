@@ -1,4 +1,3 @@
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:fetra/features/auth/sign_up/presentation/view_model/cubit/sign_up_cubit.dart';
 import 'package:fetra/features/auth/sign_up/presentation/view_model/cubit/sign_up_state.dart';
 import 'package:flutter/material.dart';
