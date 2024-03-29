@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "forgetpass": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
@@ -33,10 +34,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "احصل على نظام غذائي للصيام المتقطع"),
         "pass": MessageLookupByLibrary.simpleMessage("كلمة السر"),
         "passCon": MessageLookupByLibrary.simpleMessage("إعادة كلمة السر"),
+        "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "sign": MessageLookupByLibrary.simpleMessage("سجل"),
         "signNow": MessageLookupByLibrary.simpleMessage("سجل دخول"),
         "start": MessageLookupByLibrary.simpleMessage("إبدأ"),
         "subButton1": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
-        "subButton11": MessageLookupByLibrary.simpleMessage("انشئ حساب")
+        "subButton11": MessageLookupByLibrary.simpleMessage("انشئ حساب"),
+        "type": MessageLookupByLibrary.simpleMessage("النوع")
       };
 }

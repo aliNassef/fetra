@@ -46,8 +46,10 @@ class _CustomAuthButtonState extends State<CustomAuthButton> {
                         isHide = !isHide;
                       });
                     },
-                    child: const Icon(
-                      Icons.visibility_off,
+                    child: Icon(
+                      isHide
+                          ? Icons.remove_red_eye_outlined
+                          : Icons.visibility_off,
                       color: AppColors.gray4,
                     ),
                   )

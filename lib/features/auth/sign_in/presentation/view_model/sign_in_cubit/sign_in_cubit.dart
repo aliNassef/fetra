@@ -7,7 +7,7 @@ import 'sign_in_state.dart';
 class SignInCubit extends Cubit<SignInState> {
   SignInCubit(this.authRepo) : super(SignInInitial());
 
-  GlobalKey formKeySignIn = GlobalKey<FormState>();
+  GlobalKey<FormState> formKeySignIn = GlobalKey<FormState>();
 
   TextEditingController signInEmail = TextEditingController();
   TextEditingController signInPass = TextEditingController();
@@ -21,8 +21,16 @@ class SignInCubit extends Cubit<SignInState> {
       accountType: 'email',
     );
     data.fold(
-      (l) => emit(FailureLogIn()),
-      (r) => emit(SuccessLogIn()),
+      (l) => emit(
+        FailureLogIn(
+          errMessage: l,
+        ),
+      ),
+      (r) => emit(
+        SuccessLogIn(
+          message: r.message!,
+        ),
+      ),
     );
   }
 }

@@ -36,7 +36,7 @@ class ApiKey {
   static String typeAccount = 'type_account';
   static String token = "token";
   static String message = "message";
-  // static String id = "id";
+     static String id = "id";
   static String name = "name";
   static String phone = "phone";
   // static String confirmPassword = "confirmPassword";

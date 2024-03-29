@@ -191,6 +191,36 @@ class S {
       args: [],
     );
   }
+
+  /// `النوع`
+  String get type {
+    return Intl.message(
+      'النوع',
+      name: 'type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `العمر`
+  String get age {
+    return Intl.message(
+      'العمر',
+      name: 'age',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رقم الهاتف`
+  String get phone {
+    return Intl.message(
+      'رقم الهاتف',
+      name: 'phone',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

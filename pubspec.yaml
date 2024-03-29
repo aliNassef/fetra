@@ -33,6 +33,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   dartz: ^0.10.1
   dio: ^5.4.1
+  dropdown_button2: ^2.3.9
   equatable: ^2.0.5
   flutter:
     sdk: flutter
@@ -46,6 +47,7 @@ dependencies:
   go_router: ^13.2.1
   google_fonts: ^6.2.1
   intl: ^0.18.1
+  jwt_decoder: ^2.0.1
   shared_preferences: ^2.2.2
   shimmer: ^3.0.0
 

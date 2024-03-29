@@ -19,115 +19,121 @@ class SignInViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Column(
-        children: [
-          Stack(
-            children: [
-              Transform.translate(
-                offset: Offset(0, -MediaQuery.of(context).size.height * .1),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * .56,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        AppImages.authBack,
-                      ),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                top: MediaQuery.of(context).size.height * .03,
-                left: MediaQuery.of(context).size.height * .03,
-                child: Image.asset(
-                  AppImages.authIcon,
-                ),
-              ),
-              Positioned(
-                top: MediaQuery.of(context).size.height * .05,
-                left: MediaQuery.of(context).size.height * .005,
-                child: IconButton(
-                  onPressed: () {
-                    context.pop();
-                  },
-                  icon: SvgPicture.asset(
-                    AppImages.arrowLeft,
-                  ),
-                ),
-              ),
-              Positioned(
-                top: MediaQuery.of(context).size.height * .3,
-                left: MediaQuery.of(context).size.width * 0.65,
-                child: Text(
-                  S.of(context).login,
-                  style: AppStyles.authText,
-                ),
-              ),
-            ],
-          ),
-          CustomAuthButton(
-            controller: context.read<SignInCubit>().signInEmail,
-            title: S.of(context).email,
-          ),
-          SizedBox(
-            height: 6.h,
-          ),
-          CustomAuthButton(
-            controller: context.read<SignInCubit>().signInPass,
-            isSecure: true,
-            title: S.of(context).pass,
-          ),
-          const CustomTextButtonForgetPass(),
-          SizedBox(
-            height: 10.h,
-          ),
-          BlocListener<SignInCubit, SignInState>(
-            listener: (context, state) {
-              if (state is SuccessLogIn) {
-                // demo
-                debugPrint('successsssssssss');
-              } else if (state is FailureLogIn) {
-                debugPrint('Failure');
-              }
-            },
-            child: AppButton(
-              backgroundColor: AppColors.primaryColor,
-              text: Text(
-                S.of(context).sign,
-                style: AppStyles.onBoardingButton,
-              ),
-              onPressed: () {
-                context.read<SignInCubit>().signIn();
-              },
-            ),
-          ),
-          SizedBox(
-            height: 23.h,
-          ),
-          Text.rich(
-            TextSpan(
+      child: Form(
+        key: context.read<SignInCubit>().formKeySignIn,
+        child: Column(
+          children: [
+            Stack(
               children: [
-                TextSpan(
-                    style: AppStyles.choiceSignOrText.copyWith(
-                      fontWeight: FontWeight.w400,
-                      color: AppColors.primaryColor,
+                Transform.translate(
+                  offset: Offset(0, -MediaQuery.of(context).size.height * .1),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * .56,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          AppImages.authBack,
+                        ),
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    text: S.of(context).subButton1),
-                TextSpan(
-                  text: S.of(context).subButton11,
-                  style: AppStyles.choiceSignOrText.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.primaryColor,
+                  ),
+                ),
+                Positioned(
+                  top: MediaQuery.of(context).size.height * .03,
+                  left: MediaQuery.of(context).size.height * .03,
+                  child: Image.asset(
+                    AppImages.authIcon,
+                  ),
+                ),
+                Positioned(
+                  top: MediaQuery.of(context).size.height * .05,
+                  left: MediaQuery.of(context).size.height * .005,
+                  child: IconButton(
+                    onPressed: () {
+                      context.pop();
+                    },
+                    icon: SvgPicture.asset(
+                      AppImages.arrowLeft,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  top: MediaQuery.of(context).size.height * .3,
+                  left: MediaQuery.of(context).size.width * 0.65,
+                  child: Text(
+                    S.of(context).login,
+                    style: AppStyles.authText,
                   ),
                 ),
               ],
             ),
-          ),
-          SizedBox(
-            height: 30.h,
-          ),
-        ],
+            CustomAuthButton(
+              controller: context.read<SignInCubit>().signInEmail,
+              title: S.of(context).email,
+            ),
+            SizedBox(
+              height: 6.h,
+            ),
+            CustomAuthButton(
+              controller: context.read<SignInCubit>().signInPass,
+              isSecure: true,
+              title: S.of(context).pass,
+            ),
+            const CustomTextButtonForgetPass(),
+            SizedBox(
+              height: 10.h,
+            ),
+            BlocListener<SignInCubit, SignInState>(
+              listener: (context, state) {
+                if (state is SuccessLogIn) {
+                } else if (state is FailureLogIn) {
+                } else {}
+              },
+              child: AppButton(
+                backgroundColor: AppColors.primaryColor,
+                text: Text(
+                  S.of(context).sign,
+                  style: AppStyles.onBoardingButton,
+                ),
+                onPressed: () {
+                  if (context
+                      .read<SignInCubit>()
+                      .formKeySignIn
+                      .currentState!
+                      .validate()) {
+                    context.read<SignInCubit>().signIn();
+                  }
+                },
+              ),
+            ),
+            SizedBox(
+              height: 23.h,
+            ),
+            Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                      style: AppStyles.choiceSignOrText.copyWith(
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.primaryColor,
+                      ),
+                      text: S.of(context).subButton1),
+                  TextSpan(
+                    text: S.of(context).subButton11,
+                    style: AppStyles.choiceSignOrText.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: AppColors.primaryColor,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 30.h,
+            ),
+          ],
+        ),
       ),
     );
   }

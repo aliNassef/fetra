@@ -1,9 +1,7 @@
-import 'package:dio/dio.dart';
 import 'package:fetra/features/auth/sign_up/data/repo/sign_up_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../sign_in/data/repo/sign_in_repo.dart';
 import 'sign_up_state.dart';
 
 class SignUpCubit extends Cubit<SignUpState> {

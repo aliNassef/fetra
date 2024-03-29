@@ -14,6 +14,7 @@ class OnBoardingView extends StatelessWidget {
         child: AppBar(
           elevation: 0,
           systemOverlayStyle: const SystemUiOverlayStyle(
+            systemNavigationBarIconBrightness: Brightness.dark,
             statusBarColor: Color(0xff53B97C),
             // <-- SEE HERE
             statusBarIconBrightness: Brightness.light,
