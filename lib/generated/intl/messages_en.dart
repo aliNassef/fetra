@@ -25,16 +25,20 @@ class MessageLookup extends MessageLookupByLibrary {
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
+        "female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "forgetpass": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "haveAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "onBoardingText": MessageLookupByLibrary.simpleMessage(
             "احصل على نظام غذائي للصيام المتقطع"),
         "pass": MessageLookupByLibrary.simpleMessage("كلمة السر"),
         "passCon": MessageLookupByLibrary.simpleMessage("إعادة كلمة السر"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "please_select_gender":
+            MessageLookupByLibrary.simpleMessage("من فضلك اختر الجنس"),
         "sign": MessageLookupByLibrary.simpleMessage("سجل"),
         "signNow": MessageLookupByLibrary.simpleMessage("سجل دخول"),
         "start": MessageLookupByLibrary.simpleMessage("إبدأ"),

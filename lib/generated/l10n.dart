@@ -221,6 +221,36 @@ class S {
       args: [],
     );
   }
+
+  /// `من فضلك اختر الجنس`
+  String get please_select_gender {
+    return Intl.message(
+      'من فضلك اختر الجنس',
+      name: 'please_select_gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ذكر`
+  String get male {
+    return Intl.message(
+      'ذكر',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أنثى`
+  String get female {
+    return Intl.message(
+      'أنثى',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

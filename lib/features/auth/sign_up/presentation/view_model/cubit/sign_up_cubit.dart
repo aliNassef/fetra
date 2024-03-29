@@ -14,6 +14,7 @@ class SignUpCubit extends Cubit<SignUpState> {
   TextEditingController signUpEmail = TextEditingController();
   TextEditingController signUpAge = TextEditingController();
   TextEditingController signUpPhone = TextEditingController();
+  TextEditingController signUpGender = TextEditingController();
 
   final SignUpRepo authRepo;
   signUp() async {
@@ -22,7 +23,7 @@ class SignUpCubit extends Cubit<SignUpState> {
       name: signUpname.text,
       email: signUpEmail.text,
       pass: signUpPass.text,
-      type: 'male',
+      type: signUpGender.text,
       age: signUpAge.text,
       phone: signUpPhone.text,
     );

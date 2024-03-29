@@ -1,3 +1,4 @@
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:fetra/features/auth/sign_up/presentation/view_model/cubit/sign_up_cubit.dart';
 import 'package:fetra/features/auth/sign_up/presentation/view_model/cubit/sign_up_state.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,7 @@ import '../../../../../../core/utils/app_images.dart';
 import '../../../../../../core/utils/app_styles.dart';
 import '../../../../../../generated/l10n.dart';
 import '../../../../sign_in/presentation/views/widgets/custom_auth_button.dart';
+import 'drop_down_gender.dart';
 
 class SignUpViewBody extends StatelessWidget {
   const SignUpViewBody({super.key});
@@ -95,6 +97,10 @@ class SignUpViewBody extends StatelessWidget {
               title: S.of(context).age,
               controller: context.read<SignUpCubit>().signUpAge,
             ),
+            SizedBox(
+              height: 6.h,
+            ),
+            const DropDownGender(),
             SizedBox(
               height: 6.h,
             ),
