@@ -23,7 +23,7 @@ class SignUpCubit extends Cubit<SignUpState> {
       name: signUpname.text,
       email: signUpEmail.text,
       pass: signUpPass.text,
-      type: signUpGender.text,
+      type: 'male',
       age: signUpAge.text,
       phone: signUpPhone.text,
     );

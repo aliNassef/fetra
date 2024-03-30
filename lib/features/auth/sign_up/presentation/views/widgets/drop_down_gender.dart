@@ -68,10 +68,14 @@ class DropDownGender extends StatelessWidget {
               return null;
             },
             onChanged: (value) {
-              context.read<SignUpCubit>().signUpGender.text = value.toString();
+              if (value == 'ذكر') {
+                context.read<SignUpCubit>().signUpGender.text = 'male';
+              } else {
+                context.read<SignUpCubit>().signUpGender.text = 'female';
+              }
             },
             onSaved: (value) {
-              context.read<SignUpCubit>().signUpGender.text = value.toString();
+              context.read<SignUpCubit>().signUpGender.text = value!;
             },
             buttonStyleData: ButtonStyleData(
               decoration: BoxDecoration(

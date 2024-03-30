@@ -114,9 +114,17 @@ class SignUpViewBody extends StatelessWidget {
               height: 37.h,
             ),
             BlocListener<SignUpCubit, SignUpState>(
-              listener: (context, state) {},
+              listener: (context, state) {
+                if (state is SuccessSignUp) {
+                  print('success');
+                } else if (state is FailureSignUp) {
+                  print('Failure');
+                }
+              },
               child: AppButton(
-                onPressed: () {},
+                onPressed: () {
+                  context.read<SignUpCubit>().signUp();
+                },
                 text: Text(
                   S.of(context).createaccount,
                   style: AppStyles.onBoardingButton,
