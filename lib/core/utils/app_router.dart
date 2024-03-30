@@ -1,3 +1,4 @@
+import 'package:fetra/features/layout/presentation/views/layout_view.dart';
 import 'package:fetra/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -12,7 +13,7 @@ abstract class AppRouter {
   static const logIn = '/LogInView';
   static const signUp = '/SignUpView';
   static const homeView = '/HomeView';
-  static const forgetPassView = '/ForgetPassView';
+  static const layout = '/layOutView';
 
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
@@ -41,9 +42,15 @@ abstract class AppRouter {
         },
       ),
       GoRoute(
-        path: forgetPassView,
+        path: homeView,
         builder: (BuildContext context, GoRouterState state) {
           return const HomeView();
+        },
+      ),
+      GoRoute(
+        path: layout,
+        builder: (BuildContext context, GoRouterState state) {
+          return const LayOutView();
         },
       ),
     ],

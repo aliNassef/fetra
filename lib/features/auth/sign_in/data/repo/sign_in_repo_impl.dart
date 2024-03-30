@@ -26,16 +26,16 @@ class SignInRepoImpl extends SignInRepo {
         ApiKey.typeAccount: accountType,
       });
       var data = SignInModel.fromJson(response);
-      var userId = JwtDecoder.decode(data.data!.token!);
+    //  var userId = JwtDecoder.decode(data.data!.token!);
 
-      getIt.get<CacheHelper>().saveData(
-            key: ApiKey.token,
-            value: data.data!.token,
-          );
-      getIt.get<CacheHelper>().saveData(
-            key: ApiKey.id,
-            value: userId,
-          );
+      CacheHelper().saveData(
+        key: ApiKey.token,
+        value: data.data!.token,
+      );
+      // CacheHelper().saveData(
+      //   key: ApiKey.id,
+      //   value: userId[ApiKey.id],
+      // );
 
       return Right(data);
     } on ServerException catch (e) {

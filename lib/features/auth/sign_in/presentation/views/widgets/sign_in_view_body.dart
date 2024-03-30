@@ -89,7 +89,24 @@ class SignInViewBody extends StatelessWidget {
             BlocListener<SignInCubit, SignInState>(
               listener: (context, state) {
                 if (state is SuccessLogIn) {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text(state.message),
+                      );
+                    },
+                  );
+                  context.go(AppRouter.layout);
                 } else if (state is FailureLogIn) {
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text(state.errMessage),
+                      );
+                    },
+                  );
                 } else {}
               },
               child: AppButton(

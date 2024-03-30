@@ -48,6 +48,8 @@ dependencies:
   google_fonts: ^6.2.1
   intl: ^0.18.1
   jwt_decoder: ^2.0.1
+  page_transition: ^2.1.0
+  persistent_bottom_nav_bar: ^5.0.2
   shared_preferences: ^2.2.2
   shimmer: ^3.0.0
 
