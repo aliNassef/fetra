@@ -20,6 +20,12 @@ abstract class AppStyles {
     fontSize: 12.sp,
     fontWeight: FontWeight.w600,
   );
+  static final searchText = TextStyle(
+    fontFamily: 'Cairo',
+    color: AppColors.gray4,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+  );
 
   static final choiceSignText = GoogleFonts.inter(
     fontSize: 14.sp,
