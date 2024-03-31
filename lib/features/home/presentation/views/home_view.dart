@@ -2,13 +2,10 @@ import 'package:fetra/core/utils/app_colors.dart';
 import 'package:fetra/core/utils/app_images.dart';
 import 'package:fetra/features/home/presentation/views/widgets/custom_search_bar.dart';
 import 'package:fetra/generated/l10n.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'widgets/home_item.dart';
 
 class HomeView extends StatelessWidget {
