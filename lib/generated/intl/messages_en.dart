@@ -23,6 +23,11 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
+        "articles": MessageLookupByLibrary.simpleMessage("مقالات"),
+        "calc_fats": MessageLookupByLibrary.simpleMessage("حساب الدهون"),
+        "calc_fats_paid":
+            MessageLookupByLibrary.simpleMessage("حساب دهون مدفوع"),
+        "coaches": MessageLookupByLibrary.simpleMessage("مدربين"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "female": MessageLookupByLibrary.simpleMessage("أنثى"),
@@ -39,11 +44,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "please_select_gender":
             MessageLookupByLibrary.simpleMessage("من فضلك اختر الجنس"),
+        "recipes": MessageLookupByLibrary.simpleMessage("الوصفات"),
+        "search": MessageLookupByLibrary.simpleMessage("البحث"),
         "sign": MessageLookupByLibrary.simpleMessage("سجل"),
         "signNow": MessageLookupByLibrary.simpleMessage("سجل دخول"),
         "start": MessageLookupByLibrary.simpleMessage("إبدأ"),
         "subButton1": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "subButton11": MessageLookupByLibrary.simpleMessage("انشئ حساب"),
-        "type": MessageLookupByLibrary.simpleMessage("النوع")
+        "type": MessageLookupByLibrary.simpleMessage("النوع"),
+        "videos": MessageLookupByLibrary.simpleMessage("مقاطع الفيديو")
       };
 }

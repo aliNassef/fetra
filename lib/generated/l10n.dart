@@ -251,6 +251,76 @@ class S {
       args: [],
     );
   }
+
+  /// `البحث`
+  String get search {
+    return Intl.message(
+      'البحث',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مقالات`
+  String get articles {
+    return Intl.message(
+      'مقالات',
+      name: 'articles',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حساب الدهون`
+  String get calc_fats {
+    return Intl.message(
+      'حساب الدهون',
+      name: 'calc_fats',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مدربين`
+  String get coaches {
+    return Intl.message(
+      'مدربين',
+      name: 'coaches',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مقاطع الفيديو`
+  String get videos {
+    return Intl.message(
+      'مقاطع الفيديو',
+      name: 'videos',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الوصفات`
+  String get recipes {
+    return Intl.message(
+      'الوصفات',
+      name: 'recipes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حساب دهون مدفوع`
+  String get calc_fats_paid {
+    return Intl.message(
+      'حساب دهون مدفوع',
+      name: 'calc_fats_paid',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

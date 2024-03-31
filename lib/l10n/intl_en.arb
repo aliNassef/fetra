@@ -19,5 +19,12 @@
     "phone" : "رقم الهاتف",
     "please_select_gender"  : "من فضلك اختر الجنس",
     "male" : "ذكر",
-    "female" : "أنثى"
+    "female" : "أنثى",
+    "search" : "البحث" ,
+    "articles" : "مقالات",
+    "calc_fats" : "حساب الدهون",
+    "coaches" : "مدربين" ,
+    "videos" : "مقاطع الفيديو",
+    "recipes" : "الوصفات",
+    "calc_fats_paid" : "حساب دهون مدفوع"
 }
