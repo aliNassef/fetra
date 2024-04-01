@@ -24,6 +24,7 @@ class Fetra extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
+      
         supportedLocales: S.delegate.supportedLocales,
         routerConfig: AppRouter.router,
         theme: themeDataLight,
@@ -36,6 +37,7 @@ class Fetra extends StatelessWidget {
             child: child!,
           );
         },
+      
         debugShowCheckedModeBanner: false,
       ),
     );

@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../../../../../core/shared/widgets/app_button.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_images.dart';
@@ -116,9 +117,9 @@ class SignUpViewBody extends StatelessWidget {
             BlocListener<SignUpCubit, SignUpState>(
               listener: (context, state) {
                 if (state is SuccessSignUp) {
-                  print('success');
+                  context.go(AppRouter.layout);
                 } else if (state is FailureSignUp) {
-                  print('Failure');
+                  debugPrint('Failure');
                 }
               },
               child: AppButton(
@@ -146,10 +147,7 @@ class SignUpViewBody extends StatelessWidget {
                     text: S.of(context).haveAccount,
                   ),
                   TextSpan(
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () {
-                        context.go(AppRouter.logIn);
-                      },
+                    recognizer: TapGestureRecognizer()..onTap = () {},
                     text: S.of(context).signNow,
                     style: AppStyles.choiceSignOrText.copyWith(
                       fontWeight: FontWeight.bold,

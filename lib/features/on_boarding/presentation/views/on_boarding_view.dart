@@ -1,7 +1,6 @@
 import 'package:fetra/core/api/end_ponits.dart';
 import 'package:fetra/core/cache/cache_helper.dart';
 import 'package:fetra/core/utils/app_colors.dart';
-import 'package:fetra/features/home/presentation/views/home_view.dart';
 import 'package:fetra/features/layout/presentation/views/layout_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
