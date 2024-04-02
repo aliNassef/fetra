@@ -1,9 +1,8 @@
-import 'package:fetra/core/utils/app_router.dart';
 import 'package:fetra/features/articles/presentations/views/articles_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:go_router/go_router.dart';
+
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../../../../../core/utils/app_images.dart';

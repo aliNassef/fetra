@@ -1,5 +1,6 @@
 import 'package:fetra/core/utils/app_colors.dart';
 import 'package:fetra/core/utils/app_images.dart';
+import 'package:fetra/core/utils/app_router.dart';
 import 'package:fetra/core/utils/app_styles.dart';
 import 'package:fetra/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,7 @@ class ArticclesView extends StatelessWidget {
               ),
             ),
           ),
+          leadingWidth: 50.w,
           automaticallyImplyLeading: true,
           backgroundColor: AppColors.primaryColor[800],
           title: Text(
