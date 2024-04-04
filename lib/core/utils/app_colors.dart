@@ -19,4 +19,5 @@ abstract class AppColors {
   static const drawerColor = Color(0xff828282);
   static const gray4 = Color(0xffBDBDBD);
   static const textFieldFillColor = Color(0xffF2F2F2);
+  static const tabBarLabelColor = Color(0xff9A9999);
 }

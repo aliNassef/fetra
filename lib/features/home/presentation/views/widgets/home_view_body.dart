@@ -1,5 +1,7 @@
+import 'package:fetra/features/articles/presentations/view_model/cubit/article_cubit.dart';
 import 'package:fetra/features/articles/presentations/views/articles_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -80,10 +82,13 @@ class HomeViewBody extends StatelessWidget {
                         backgroundColor: const Color(0xffEEF7F1),
                         onTap: () => PersistentNavBarNavigator.pushNewScreen(
                           customPageRoute: MaterialPageRoute(
-                            builder: (context) => const ArticclesView(),
+                            builder: (context) => BlocProvider(
+                              create: (context) => ArticleCubit(),
+                              child: const ArticlesView(),
+                            ),
                           ),
                           context,
-                          screen: const ArticclesView(),
+                          screen: const ArticlesView(),
                           pageTransitionAnimation:
                               PageTransitionAnimation.slideUp,
                         ),

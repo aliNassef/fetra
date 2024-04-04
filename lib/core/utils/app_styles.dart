@@ -48,4 +48,11 @@ abstract class AppStyles {
     fontFamily: 'Cairo',
     color: AppColors.primaryColor,
   );
+
+  static final textStyle16R = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Cairo',
+    color: Colors.white,
+  );
 }
