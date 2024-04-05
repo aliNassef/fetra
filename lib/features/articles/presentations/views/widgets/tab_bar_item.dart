@@ -8,10 +8,10 @@ class TabBarItem extends StatelessWidget {
   const TabBarItem({
     super.key,
     required this.title,
-    required this.index,
+    required this.controller,
   });
   final String title;
-  final int index;
+  final TabController controller;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,14 +19,14 @@ class TabBarItem extends StatelessWidget {
       height: 40.h,
       width: 80.w,
       decoration: BoxDecoration(
-        color: index == ArticleCubit.get(context).currentIndex
+        color: controller.index == ArticleCubit.get(context).currentIndex
             ? AppColors.primaryColor
             : const Color(0xffFAFAFA),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Text(
         title,
-        style: index != ArticleCubit.get(context).currentIndex
+        style: controller.index != ArticleCubit.get(context).currentIndex
             ? AppStyles.textStyle16R.copyWith(color: AppColors.tabBarLabelColor)
             : AppStyles.textStyle16R,
       ),

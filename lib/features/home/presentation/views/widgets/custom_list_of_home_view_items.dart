@@ -38,7 +38,7 @@ class CustomListOfHomeViewItems extends StatelessWidget {
                         builder: (context) => BlocProvider(
                           create: (context) => ArticleCubit(
                             getIt.get<ArticleRepoImpl>(),
-                          ),
+                          )..getArticleCategory(),
                           child: const ArticlesView(),
                         ),
                       ),

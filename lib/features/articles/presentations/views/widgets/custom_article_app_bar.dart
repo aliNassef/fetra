@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+ import 'package:flutter/material.dart';
+ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../core/shared/functions/locale.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -33,6 +33,19 @@ class _CustomArticleAppBarState extends State<CustomArticleAppBar> {
           child: Directionality(
             textDirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
             child: TabBar(
+              onTap: (value) {
+                widget.controller.animateTo(
+                  value,
+                  duration: const Duration(
+                    seconds: 10,
+                  ),
+                  curve: Curves.linear,
+                );
+                // widget.controller.index = value;
+                // context.read<ArticleCubit>().currentIndex = value;
+                // print(
+                //     ' current ${context.read<ArticleCubit>().currentIndex} ,cont ${widget.controller.index}  ');
+              },
               physics: const BouncingScrollPhysics(),
               controller: widget.controller,
               labelPadding: EdgeInsets.only(
@@ -49,11 +62,11 @@ class _CustomArticleAppBarState extends State<CustomArticleAppBar> {
               dividerColor: Colors.white,
               indicatorColor: Colors.white,
               tabs: List.generate(
-                6,
+                widget.controller.length,
                 (index) {
                   return TabBarItem(
                     title: 'ali',
-                    index: index,
+                    controller: widget.controller,
                   );
                 },
               ),

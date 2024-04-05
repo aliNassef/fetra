@@ -13,6 +13,10 @@ final class ChangeScreenState extends ArticleState {}
 
 final class ArticleCategoryLoading extends ArticleState {}
 
-final class ArticleCategoryLoaded extends ArticleState {}
+final class ArticleCategoryLoaded extends ArticleState {
+  final TabBarModel model;
+
+  const ArticleCategoryLoaded({required this.model});
+}
 
 final class ArticleCategoryFailure extends ArticleState {}
