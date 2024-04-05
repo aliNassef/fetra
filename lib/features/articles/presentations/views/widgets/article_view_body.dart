@@ -8,6 +8,7 @@ class ArticlesViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return Directionality(
       textDirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
       child: TabBarView(

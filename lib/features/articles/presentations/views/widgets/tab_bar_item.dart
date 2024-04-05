@@ -1,6 +1,5 @@
 import 'package:fetra/core/utils/app_colors.dart';
 import 'package:fetra/core/utils/app_styles.dart';
-import 'package:fetra/features/articles/presentations/view_model/cubit/article_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,9 +8,11 @@ class TabBarItem extends StatelessWidget {
     super.key,
     required this.title,
     required this.controller,
+    required this.index,
   });
   final String title;
   final TabController controller;
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,14 +20,14 @@ class TabBarItem extends StatelessWidget {
       height: 40.h,
       width: 80.w,
       decoration: BoxDecoration(
-        color: controller.index == ArticleCubit.get(context).currentIndex
+        color: controller.index == index
             ? AppColors.primaryColor
             : const Color(0xffFAFAFA),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Text(
         title,
-        style: controller.index != ArticleCubit.get(context).currentIndex
+        style: controller.index != index
             ? AppStyles.textStyle16R.copyWith(color: AppColors.tabBarLabelColor)
             : AppStyles.textStyle16R,
       ),

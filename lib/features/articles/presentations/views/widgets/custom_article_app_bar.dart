@@ -1,5 +1,6 @@
- import 'package:flutter/material.dart';
- import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../core/shared/functions/locale.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -23,8 +24,22 @@ class CustomArticleAppBar extends StatefulWidget
 }
 
 class _CustomArticleAppBarState extends State<CustomArticleAppBar> {
+  int x = 0;
   @override
   Widget build(BuildContext context) {
+    widget.controller.addListener(() {
+      setState(() {});
+    });
+    var list = List.generate(
+      widget.controller.length,
+      (index) {
+        return TabBarItem(
+          index: index,
+          title: 'ali',
+          controller: widget.controller,
+        );
+      },
+    );
     return AppBar(
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(kToolbarHeight),
@@ -39,12 +54,9 @@ class _CustomArticleAppBarState extends State<CustomArticleAppBar> {
                   duration: const Duration(
                     seconds: 10,
                   ),
-                  curve: Curves.linear,
+                  curve: Curves.easeIn,
                 );
-                // widget.controller.index = value;
-                // context.read<ArticleCubit>().currentIndex = value;
-                // print(
-                //     ' current ${context.read<ArticleCubit>().currentIndex} ,cont ${widget.controller.index}  ');
+                setState(() {});
               },
               physics: const BouncingScrollPhysics(),
               controller: widget.controller,
@@ -61,15 +73,7 @@ class _CustomArticleAppBarState extends State<CustomArticleAppBar> {
               unselectedLabelColor: AppColors.tabBarLabelColor,
               dividerColor: Colors.white,
               indicatorColor: Colors.white,
-              tabs: List.generate(
-                widget.controller.length,
-                (index) {
-                  return TabBarItem(
-                    title: 'ali',
-                    controller: widget.controller,
-                  );
-                },
-              ),
+              tabs: list,
             ),
           ),
         ),
