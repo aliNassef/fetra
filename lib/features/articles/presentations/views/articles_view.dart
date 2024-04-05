@@ -16,7 +16,7 @@ class _ArticlesViewState extends State<ArticlesView>
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: 3, vsync: this);
+    controller = TabController(length: 6, vsync: this);
 
     setUpController();
   }

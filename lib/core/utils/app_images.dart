@@ -35,4 +35,5 @@ abstract class AppImages {
   static const meals = "assets/images/meals.png";
   static const link = "assets/images/link.png";
   static const congratulation = "assets/images/congratulation.svg";
+  static const vegetables = 'assets/images/vegetables.png';
 }

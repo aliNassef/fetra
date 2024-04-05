@@ -55,4 +55,10 @@ abstract class AppStyles {
     fontFamily: 'Cairo',
     color: Colors.white,
   );
+  static final textStyle14R = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Cairo',
+    color: Colors.black,
+  );
 }

@@ -9,4 +9,4 @@ sealed class ArticleState extends Equatable {
 
 final class ArticleInitial extends ArticleState {}
 
-final class ChangeScreenState extends ArticleState{}
+final class ChangeScreenState extends ArticleState {}

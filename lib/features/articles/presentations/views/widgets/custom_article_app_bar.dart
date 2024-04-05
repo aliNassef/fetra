@@ -7,7 +7,6 @@ import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_images.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../generated/l10n.dart';
-import '../../view_model/cubit/article_cubit.dart';
 import 'tab_bar_item.dart';
 
 class CustomArticleAppBar extends StatefulWidget
@@ -40,17 +39,14 @@ class _CustomArticleAppBarState extends State<CustomArticleAppBar> {
                 top: 10.h,
                 left: 24.w,
               ),
+              isScrollable: true,
               labelColor: AppColors.tabBarLabelColor,
-              onTap: (value) {
-                ArticleCubit.get(context).changeScreen(value);
-                setState(() {});
-              },
               dividerHeight: 0,
               unselectedLabelColor: AppColors.tabBarLabelColor,
               dividerColor: Colors.white,
               indicatorColor: Colors.white,
               tabs: List.generate(
-                3,
+                6,
                 (index) {
                   return TabBarItem(
                     title: 'ali',
