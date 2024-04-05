@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../../core/shared/functions/locale.dart';
@@ -24,7 +23,6 @@ class CustomArticleAppBar extends StatefulWidget
 }
 
 class _CustomArticleAppBarState extends State<CustomArticleAppBar> {
-  int x = 0;
   @override
   Widget build(BuildContext context) {
     widget.controller.addListener(() {
@@ -56,7 +54,6 @@ class _CustomArticleAppBarState extends State<CustomArticleAppBar> {
                   ),
                   curve: Curves.easeIn,
                 );
-                setState(() {});
               },
               physics: const BouncingScrollPhysics(),
               controller: widget.controller,
