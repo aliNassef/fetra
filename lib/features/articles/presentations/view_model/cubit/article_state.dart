@@ -10,3 +10,9 @@ sealed class ArticleState extends Equatable {
 final class ArticleInitial extends ArticleState {}
 
 final class ChangeScreenState extends ArticleState {}
+
+final class ArticleCategoryLoading extends ArticleState {}
+
+final class ArticleCategoryLoaded extends ArticleState {}
+
+final class ArticleCategoryFailure extends ArticleState {}

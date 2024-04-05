@@ -61,4 +61,16 @@ abstract class AppStyles {
     fontFamily: 'Cairo',
     color: Colors.black,
   );
+  static final textStyle18SB = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Cairo',
+    color: Colors.black,
+  );
+  static final textStyle12R = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Cairo',
+    color: const Color(0xff2F315A),
+  );
 }
