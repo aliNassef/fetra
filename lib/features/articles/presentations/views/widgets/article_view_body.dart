@@ -2,6 +2,7 @@ import 'package:fetra/core/shared/functions/locale.dart';
 import 'package:fetra/core/utils/app_images.dart';
 import 'package:fetra/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -16,7 +17,8 @@ class ArticlesViewBody extends StatelessWidget {
       child: TabBarView(
         controller: controller,
         children: [
-          const ArticleItem(),
+          ListView.builder(
+              itemBuilder: (context, index) => const ArticleItem()),
           Container(
             color: Colors.black,
           ),
@@ -44,12 +46,17 @@ class ArticleItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(13.r),
       margin: EdgeInsets.only(
         left: 30.w,
         right: 18.w,
         top: 20.h,
       ),
-      color: const Color(0xffFAFAFB),
+      decoration: BoxDecoration(
+        color: const Color(0xffFAFAFB),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      height: MediaQuery.of(context).size.height * .35,
       width: MediaQuery.of(context).size.width,
       child: Column(
         children: [
@@ -108,9 +115,11 @@ class ArticleItem extends StatelessWidget {
             height: 9.h,
           ),
           Text(
+            maxLines: 3,
             'هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟',
             style: AppStyles.textStyle12R.copyWith(
               color: const Color(0xff8B8C91),
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],

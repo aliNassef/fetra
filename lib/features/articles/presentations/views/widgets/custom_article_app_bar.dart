@@ -34,11 +34,15 @@ class _CustomArticleAppBarState extends State<CustomArticleAppBar> {
           child: Directionality(
             textDirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
             child: TabBar(
+              physics: const BouncingScrollPhysics(),
               controller: widget.controller,
               labelPadding: EdgeInsets.only(
+                right: 30.w,
                 top: 10.h,
-                left: 24.w,
-              ),
+              ), // Adjust the padding as needed
+              padding: EdgeInsets.zero,
+              enableFeedback: true,
+              tabAlignment: TabAlignment.start,
               isScrollable: true,
               labelColor: AppColors.tabBarLabelColor,
               dividerHeight: 0,
