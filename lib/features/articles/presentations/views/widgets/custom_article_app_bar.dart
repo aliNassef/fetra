@@ -1,3 +1,4 @@
+import 'package:fetra/features/articles/data/models/tab_bar_model/tab_bar_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -13,8 +14,10 @@ class CustomArticleAppBar extends StatefulWidget
   const CustomArticleAppBar({
     super.key,
     required this.controller,
+    required this.model,
   });
   final TabController controller;
+  final TabBarModel model;
   @override
   State<CustomArticleAppBar> createState() => _CustomArticleAppBarState();
 
@@ -33,7 +36,7 @@ class _CustomArticleAppBarState extends State<CustomArticleAppBar> {
       (index) {
         return TabBarItem(
           index: index,
-          title: 'ali',
+          title: widget.model.data![index].name!,
           controller: widget.controller,
         );
       },

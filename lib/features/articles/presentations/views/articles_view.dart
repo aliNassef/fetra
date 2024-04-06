@@ -28,6 +28,7 @@ class _ArticlesViewState extends State<ArticlesView>
           );
           return Scaffold(
             appBar: CustomArticleAppBar(
+              model: state.model,
               controller: controller!,
             ),
             body: ArticlesViewBody(

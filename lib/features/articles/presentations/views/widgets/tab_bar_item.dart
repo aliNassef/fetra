@@ -18,18 +18,21 @@ class TabBarItem extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       height: 40.h,
-      width: 80.w,
       decoration: BoxDecoration(
         color: controller.index == index
             ? AppColors.primaryColor
             : const Color(0xffFAFAFA),
         borderRadius: BorderRadius.circular(8),
       ),
-      child: Text(
-        title,
-        style: controller.index != index
-            ? AppStyles.textStyle16R.copyWith(color: AppColors.tabBarLabelColor)
-            : AppStyles.textStyle16R,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 3.w),
+        child: Text(
+          title,
+          style: controller.index != index
+              ? AppStyles.textStyle16R
+                  .copyWith(color: AppColors.tabBarLabelColor)
+              : AppStyles.textStyle16R,
+        ),
       ),
     );
   }

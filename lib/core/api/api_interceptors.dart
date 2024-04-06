@@ -10,6 +10,7 @@ class ApiInterceptor extends Interceptor {
         CacheHelper().getData(key: ApiKey.token) != null
             ? '${CacheHelper().getData(key: ApiKey.token)}'
             : null;
+    // options.headers[] = ;
     super.onRequest(options, handler);
   }
 }
