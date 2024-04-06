@@ -10,7 +10,7 @@ class ApiInterceptor extends Interceptor {
         CacheHelper().getData(key: ApiKey.token) != null
             ? '${CacheHelper().getData(key: ApiKey.token)}'
             : null;
-    // options.headers[] = ;
+    options.headers['Accept-Language'] = 'ar';
     super.onRequest(options, handler);
   }
 }
