@@ -17,7 +17,7 @@ class GetCategoryByIdCubit extends Cubit<GetCategoryByIdState> {
         GetCategoryByIdSuccess(model: l),
       ),
       (r) => emit(
-        GetCategoryByIdFailure(),
+        GetCategoryByIdFailure(errMessage: r),
       ),
     );
   }

@@ -15,6 +15,10 @@ final class GetCategoryByIdSuccess extends GetCategoryByIdState {
   const GetCategoryByIdSuccess({required this.model});
 }
 
-final class GetCategoryByIdFailure extends GetCategoryByIdState {}
+final class GetCategoryByIdFailure extends GetCategoryByIdState {
+  final String errMessage;
+
+  const GetCategoryByIdFailure({required this.errMessage});
+}
 
 final class GetCategoryByIdLoding extends GetCategoryByIdState {}

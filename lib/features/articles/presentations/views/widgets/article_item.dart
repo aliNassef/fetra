@@ -1,3 +1,4 @@
+import 'package:fetra/features/articles/data/models/article_model/datum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -7,8 +8,8 @@ import '../../../../../core/utils/app_images.dart';
 import '../../../../../core/utils/app_styles.dart';
 
 class ArticleItem extends StatelessWidget {
-  const ArticleItem({super.key});
-
+  const ArticleItem({super.key, required this.model});
+  final Datum model;
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -38,7 +39,7 @@ class ArticleItem extends StatelessWidget {
                   width: 6.w,
                 ),
                 Text(
-                  'Ali Nassef',
+                  model.admin!,
                   style: AppStyles.textStyle14R,
                 ),
               ],
@@ -56,7 +57,7 @@ class ArticleItem extends StatelessWidget {
                   width: 100.w,
                 ),
                 Text(
-                  'هل الاكل الصحي مفيد؟\n ولماذا؟',
+                  model.title!,
                   textDirection:
                       isArabic() ? TextDirection.rtl : TextDirection.ltr,
                   style: AppStyles.textStyle18SB,
@@ -74,7 +75,7 @@ class ArticleItem extends StatelessWidget {
                   AppImages.more,
                 ),
                 Text(
-                  'منذ 18 ساعة',
+                  model.createdAt!,
                   style: AppStyles.textStyle12R,
                 ),
               ],
@@ -84,7 +85,7 @@ class ArticleItem extends StatelessWidget {
             ),
             Text(
               maxLines: 3,
-              'هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟',
+              model.desc!,
               style: AppStyles.textStyle12R.copyWith(
                 color: const Color(0xff8B8C91),
                 overflow: TextOverflow.ellipsis,
