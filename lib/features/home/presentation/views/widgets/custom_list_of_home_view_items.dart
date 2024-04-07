@@ -1,5 +1,7 @@
 import 'package:fetra/core/api/service_locator.dart';
 import 'package:fetra/features/articles/data/repo/article_repo_impl.dart';
+import 'package:fetra/features/articles/presentations/view_model/change_tab_item_cubit/change_tab_item_cubit_cubit.dart';
+import 'package:fetra/features/articles/presentations/views/articles_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,8 +9,7 @@ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../../../../../core/utils/app_images.dart';
 import '../../../../../generated/l10n.dart';
-import '../../../../articles/presentations/view_model/cubit/article_cubit.dart';
-import '../../../../articles/presentations/views/articles_view.dart';
+import '../../../../articles/presentations/view_model/article_cubit/article_cubit.dart';
 import 'home_item.dart';
 
 class CustomListOfHomeViewItems extends StatelessWidget {
@@ -35,15 +36,22 @@ class CustomListOfHomeViewItems extends StatelessWidget {
                     backgroundColor: const Color(0xffEEF7F1),
                     onTap: () => PersistentNavBarNavigator.pushNewScreen(
                       customPageRoute: MaterialPageRoute(
-                        builder: (context) => BlocProvider(
-                          create: (context) => ArticleCubit(
-                            getIt.get<ArticleRepoImpl>(),
-                          )..getArticleCategory(),
-                          child: const ArticlesView(),
+                        builder: (context) => MultiBlocProvider(
+                          providers: [
+                            BlocProvider(
+                              create: (context) => ArticleCubit(
+                                getIt.get<ArticleRepoImpl>(),
+                              )..getArticleCategory(),
+                            ),
+                            BlocProvider(
+                              create: (context) => ChangeTabItemCubitCubit(),
+                            ),
+                          ],
+                          child: const ArticleView(),
                         ),
                       ),
                       context,
-                      screen: const ArticlesView(),
+                      screen: const ArticleView(),
                       pageTransitionAnimation: PageTransitionAnimation.slideUp,
                     ),
                   ),

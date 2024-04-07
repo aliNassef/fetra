@@ -1,39 +1,23 @@
-import 'package:fetra/core/utils/app_colors.dart';
-import 'package:fetra/core/utils/app_styles.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+// import 'package:fetra/features/articles/presentations/view_model/article_cubit/article_cubit.dart';
+// import 'package:fetra/features/articles/presentations/view_model/change_tab_item_cubit/change_tab_item_cubit_cubit.dart';
+// import 'package:flutter/material.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class TabBarItem extends StatelessWidget {
-  const TabBarItem({
-    super.key,
-    required this.title,
-    required this.controller,
-    required this.index,
-  });
-  final String title;
-  final TabController controller;
-  final int index;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      height: 40.h,
-      decoration: BoxDecoration(
-        color: controller.index == index
-            ? AppColors.primaryColor
-            : const Color(0xffFAFAFA),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 3.w),
-        child: Text(
-          title,
-          style: controller.index != index
-              ? AppStyles.textStyle16R
-                  .copyWith(color: AppColors.tabBarLabelColor)
-              : AppStyles.textStyle16R,
-        ),
-      ),
-    );
-  }
-}
+// import '../../../../../core/utils/app_colors.dart';
+// import '../../../../../core/utils/app_styles.dart';
+
+// class TabBarItem extends StatelessWidget {
+//   const TabBarItem({
+//     super.key,
+//     required this.title,
+//     required this.index,
+//   });
+//   final String title;
+//   final int index;
+//   @override
+//   Widget build(BuildContext context) {
+//     print('object');
+//     print(context.read<ChangeTabItemCubitCubit>().curentIndex );
+//     }
+// }
