@@ -1,4 +1,3 @@
-
 import 'package:fetra/features/articles/presentations/views/widgets/article_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,8 +34,7 @@ class BuildCustomListViewOfArticles extends StatelessWidget {
                             horizontalOffset: 30,
                             verticalOffset: 300.0,
                             child: FlipAnimation(
-                              duration:
-                                  const Duration(milliseconds: 3000),
+                              duration: const Duration(milliseconds: 3000),
                               curve: Curves.fastLinearToSlowEaseIn,
                               flipAxis: FlipAxis.y,
                               child: ArticleItem(
@@ -56,8 +54,7 @@ class BuildCustomListViewOfArticles extends StatelessWidget {
                   child: SpinKitFadingCircle(
                     itemBuilder: (BuildContext context, int index) {
                       return const DecoratedBox(
-                        decoration:
-                            BoxDecoration(color: Color(0xffC4C4C4)),
+                        decoration: BoxDecoration(color: Color(0xffC4C4C4)),
                       );
                     },
                   ),
