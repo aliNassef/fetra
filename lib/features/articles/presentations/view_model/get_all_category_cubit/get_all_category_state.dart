@@ -1,4 +1,4 @@
-part of 'article_cubit.dart';
+part of 'get_all_category_cubit.dart';
 
 sealed class ArticleState extends Equatable {
   const ArticleState();
@@ -19,4 +19,8 @@ final class ArticleCategoryLoaded extends ArticleState {
   const ArticleCategoryLoaded({required this.model});
 }
 
-final class ArticleCategoryFailure extends ArticleState {}
+final class ArticleCategoryFailure extends ArticleState {
+  final String errMessage;
+
+  const ArticleCategoryFailure({required this.errMessage});
+}

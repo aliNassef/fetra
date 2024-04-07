@@ -14,7 +14,7 @@ class ArticleRepoImpl extends ArticleRepo {
   Future<Either<ArticleModel, String>> getArticleData(
       {required String id}) async {
     try {
-      final response = await api.get('${EndPoint.getAllVideosById}$id');
+      final response = await api.get('${EndPoint.getBlogsWithId}$id');
       var data = ArticleModel.fromJson(response);
       return Left(data);
     } on ServerException catch (e) {

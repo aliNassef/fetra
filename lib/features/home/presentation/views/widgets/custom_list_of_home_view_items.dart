@@ -1,6 +1,7 @@
 import 'package:fetra/core/api/service_locator.dart';
 import 'package:fetra/features/articles/data/repo/article_repo_impl.dart';
 import 'package:fetra/features/articles/presentations/view_model/change_tab_item_cubit/change_tab_item_cubit_cubit.dart';
+import 'package:fetra/features/articles/presentations/view_model/get_categry_by_id/get_category_by_id_cubit.dart';
 import 'package:fetra/features/articles/presentations/views/articles_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -9,7 +10,7 @@ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../../../../../core/utils/app_images.dart';
 import '../../../../../generated/l10n.dart';
-import '../../../../articles/presentations/view_model/article_cubit/article_cubit.dart';
+import '../../../../articles/presentations/view_model/get_all_category_cubit/get_all_category_cubit.dart';
 import 'home_item.dart';
 
 class CustomListOfHomeViewItems extends StatelessWidget {
@@ -46,6 +47,11 @@ class CustomListOfHomeViewItems extends StatelessWidget {
                             BlocProvider(
                               create: (context) => ChangeTabItemCubitCubit(),
                             ),
+                            BlocProvider(
+                              create: (context) => GetCategoryByIdCubit(
+                                getIt.get<ArticleRepoImpl>(),
+                              ),
+                            )
                           ],
                           child: const ArticleView(),
                         ),
