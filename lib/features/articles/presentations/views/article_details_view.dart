@@ -1,5 +1,7 @@
 import 'package:fetra/core/utils/app_images.dart';
 import 'package:fetra/core/utils/app_styles.dart';
+import 'package:fetra/features/articles/data/models/article_model/article_model.dart';
+import 'package:fetra/features/articles/data/models/article_model/datum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -27,6 +29,7 @@ class ArticleDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var instance = GoRouterState.of(context).extra as Datum;
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -34,11 +37,12 @@ class ArticleDetailsViewBody extends StatelessWidget {
             children: [
               Container(
                 height: MediaQuery.of(context).size.height * .7,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: NetworkImage(
-                      'https://th.bing.com/th/id/OIP.YamThAfETQJZRHNHwcjeCAHaE7?rs=1&pid=ImgDetMain',
+                      instance.img ??
+                          'https://th.bing.com/th/id/R.ea411ebf6153f5f3201aa5a134949f3e?rik=TMsZisGUrPRPSA&pid=ImgRaw&r=0',
                     ),
                   ),
                 ),
@@ -65,7 +69,7 @@ class ArticleDetailsViewBody extends StatelessWidget {
             height: 31.h,
           ),
           Text(
-            'هل الاكل الصحي مفيد؟ ولماذا؟',
+            instance.title!,
             style: AppStyles.textStyle20SB,
           ),
           SizedBox(
@@ -74,7 +78,7 @@ class ArticleDetailsViewBody extends StatelessWidget {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 22.w),
             child: Text(
-              'هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟ هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟هل الاكل الصحي مفيد؟ ولماذا؟',
+              instance.desc!,
               style: AppStyles.textStyle14R,
             ),
           )

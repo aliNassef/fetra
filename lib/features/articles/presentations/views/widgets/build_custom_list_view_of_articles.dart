@@ -50,7 +50,7 @@ class BuildCustomListViewOfArticles extends StatelessWidget {
                                   //     ),
                                   //     screen: const ArticleDetailsView());
                                   GoRouter.of(context)
-                                      .push(AppRouter.articleDetailsView);
+                                      .push(AppRouter.articleDetailsView , extra: state.model.data![index]);
                                 },
                                 child: ArticleItem(
                                   model: state.model.data![index],
