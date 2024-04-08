@@ -1,19 +1,17 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../../../core/utils/app_colors.dart';
-import '../../../../../core/utils/app_images.dart';
-import '../../../../../core/utils/app_styles.dart';
-import '../../../../../generated/l10n.dart';
+import '../../utils/app_colors.dart';
+import '../../utils/app_images.dart';
+import '../../utils/app_styles.dart';
 
-class CustomArticleAppbar extends StatelessWidget
-    implements PreferredSizeWidget {
-  const CustomArticleAppbar({
+class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
+  const CustomAppbar({
     super.key,
+    required this.title,
   });
-
+  final String title;
   @override
   Widget build(BuildContext context) {
     return PreferredSize(
@@ -38,7 +36,7 @@ class CustomArticleAppbar extends StatelessWidget
         automaticallyImplyLeading: true,
         backgroundColor: AppColors.primaryColor[800],
         title: Text(
-          S.of(context).articles,
+          title,
           style: AppStyles.onBoardingTitle.copyWith(
             fontWeight: FontWeight.w600,
             color: Colors.white,

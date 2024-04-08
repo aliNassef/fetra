@@ -3,6 +3,7 @@ import 'package:fetra/features/articles/data/repo/article_repo_impl.dart';
 import 'package:fetra/features/articles/presentations/view_model/change_tab_item_cubit/change_tab_item_cubit_cubit.dart';
 import 'package:fetra/features/articles/presentations/view_model/get_categry_by_id/get_category_by_id_cubit.dart';
 import 'package:fetra/features/articles/presentations/views/articles_view.dart';
+import 'package:fetra/features/recipes/presentation/views/recipes_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -119,6 +120,12 @@ class CustomListOfHomeViewItems extends StatelessWidget {
               children: [
                 Expanded(
                   child: HomeItem(
+                    onTap: () {
+                      PersistentNavBarNavigator.pushNewScreen(context, 
+                      screen: 
+                      const RecipesView()
+                      );
+                    },
                     image: AppImages.meals,
                     title: S.of(context).recipes,
                     radius: 18,

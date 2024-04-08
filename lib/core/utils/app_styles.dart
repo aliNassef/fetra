@@ -78,4 +78,10 @@ abstract class AppStyles {
     fontWeight: FontWeight.w600,
     fontFamily: 'Cairo',
   );
+
+  static final textStyle15SB = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Cairo',
+  );
 }
