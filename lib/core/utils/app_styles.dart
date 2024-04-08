@@ -73,4 +73,9 @@ abstract class AppStyles {
     fontFamily: 'Cairo',
     color: const Color(0xff2F315A),
   );
+  static final textStyle20SB = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Cairo',
+  );
 }
