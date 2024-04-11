@@ -45,6 +45,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "please_select_gender":
             MessageLookupByLibrary.simpleMessage("من فضلك اختر الجنس"),
         "recipes": MessageLookupByLibrary.simpleMessage("الوصفات"),
+        "recipes_title":
+            MessageLookupByLibrary.simpleMessage("وصفات لأطباق السلطة:"),
         "search": MessageLookupByLibrary.simpleMessage("البحث"),
         "sign": MessageLookupByLibrary.simpleMessage("سجل"),
         "signNow": MessageLookupByLibrary.simpleMessage("سجل دخول"),

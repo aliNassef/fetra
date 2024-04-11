@@ -321,6 +321,16 @@ class S {
       args: [],
     );
   }
+
+  /// `وصفات لأطباق السلطة:`
+  String get recipes_title {
+    return Intl.message(
+      'وصفات لأطباق السلطة:',
+      name: 'recipes_title',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

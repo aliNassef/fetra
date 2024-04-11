@@ -41,6 +41,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "passCon": MessageLookupByLibrary.simpleMessage("إعادة كلمة السر"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "recipes": MessageLookupByLibrary.simpleMessage("الوصفات"),
+        "recipes_title":
+            MessageLookupByLibrary.simpleMessage("وصفات لأطباق السلطة:"),
         "search": MessageLookupByLibrary.simpleMessage("البحث"),
         "sign": MessageLookupByLibrary.simpleMessage("سجل"),
         "signNow": MessageLookupByLibrary.simpleMessage("سجل دخول"),

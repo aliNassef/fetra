@@ -26,5 +26,6 @@
     "coaches" : "مدربين" ,
     "videos" : "مقاطع الفيديو",
     "recipes" : "الوصفات",
-    "calc_fats_paid" : "حساب دهون مدفوع"
+    "calc_fats_paid" : "حساب دهون مدفوع",
+    "recipes_title" : "وصفات لأطباق السلطة:"
 }
