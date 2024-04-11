@@ -121,10 +121,8 @@ class CustomListOfHomeViewItems extends StatelessWidget {
                 Expanded(
                   child: HomeItem(
                     onTap: () {
-                      PersistentNavBarNavigator.pushNewScreen(context, 
-                      screen: 
-                      const RecipesView()
-                      );
+                      PersistentNavBarNavigator.pushNewScreen(context,
+                          screen: const RecipesView());
                     },
                     image: AppImages.meals,
                     title: S.of(context).recipes,
