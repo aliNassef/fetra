@@ -1,4 +1,3 @@
-import 'package:fetra/core/shared/functions/locale.dart';
 import 'package:fetra/core/shared/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
