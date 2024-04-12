@@ -1,6 +1,6 @@
-  import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
- 
+
 import '../../../../../core/shared/functions/locale.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../generated/l10n.dart';
@@ -28,7 +28,10 @@ class RecipesViewBody extends StatelessWidget {
             SizedBox(
               height: 45.h,
             ),
-            const RecipesGridView()
+            const RecipesGridView(),
+            SizedBox(
+              height: 20.h,
+            )
           ],
         ),
       ),

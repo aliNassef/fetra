@@ -1,7 +1,8 @@
+import 'package:fetra/features/recipes/presentation/views/recipes_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-
+ import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../../../../../core/utils/app_images.dart';
 import 'recipe_item.dart';
 
@@ -22,7 +23,7 @@ class RecipesGridView extends StatelessWidget {
               crossAxisSpacing: 22.w,
               mainAxisSpacing: 24.h,
             ),
-            itemCount: 5,
+            itemCount: 10,
             itemBuilder: (context, index) {
               return AnimationConfiguration.staggeredList(
                 position: index,
@@ -36,28 +37,25 @@ class RecipesGridView extends StatelessWidget {
                     duration: const Duration(milliseconds: 3000),
                     curve: Curves.fastLinearToSlowEaseIn,
                     flipAxis: FlipAxis.y,
-                    child: GestureDetector(
+                    child: RecipeItem(
+                      radius: 18.r,
+                      image: AppImages.calc,
+                      backgroundColor: _recipeBackGroundItemColor(index),
+                      borderColor: _recipeBorderItemColor(index),
+                      title: 'ali',
                       onTap: () {
-                        // PersistentNavBarNavigator.pushNewScreen(
-                        //     context,
-                        //     pageTransitionAnimation:
-                        //         PageTransitionAnimation.slideUp,
-                        //     customPageRoute: MaterialPageRoute(
-                        //       builder: (context) =>
-                        //           const ArticleDetailsView(),
-                        //     ),
-                        //     screen: const ArticleDetailsView());
-                        //   GoRouter.of(context)
-                        //       .push(AppRouter.articleDetailsView , extra: state.model.data![index]);
+                        PersistentNavBarNavigator.pushDynamicScreen(
+                          context,
+                          screen: MaterialPageRoute(
+                            builder: (context) {
+                              return Builder(
+                                builder: (context) =>
+                                    const RecipesDetailsView(),
+                              );
+                            },
+                          ),
+                        );
                       },
-                      child: RecipeItem(
-                        radius: 18.r,
-                        image: AppImages.calc,
-                        backgroundColor: recipeBackGroundItemColor(index),
-                        borderColor: recipeBorderItemColor(index),
-                        title: 'ali',
-                        onTap: () {},
-                      ),
                     ),
                   ),
                 ),
@@ -69,7 +67,7 @@ class RecipesGridView extends StatelessWidget {
     );
   }
 
-  recipeBackGroundItemColor(int index) {
+  _recipeBackGroundItemColor(int index) {
     int num = index % 6;
     switch (num) {
       case 0:
@@ -87,7 +85,7 @@ class RecipesGridView extends StatelessWidget {
     }
   }
 
-  recipeBorderItemColor(int index) {
+  _recipeBorderItemColor(int index) {
     int num = index % 6;
     switch (num) {
       case 0:
