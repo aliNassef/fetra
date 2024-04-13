@@ -1,3 +1,4 @@
+import 'package:fetra/features/recipes/data/models/recipe_model/recipe_model.dart';
 import 'package:fetra/features/recipes/presentation/views/recipes_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,8 +10,9 @@ import 'recipe_item.dart';
 class RecipesGridView extends StatelessWidget {
   const RecipesGridView({
     super.key,
+    required this.instane,
   });
-
+  final RecipeModel instane;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -39,10 +41,10 @@ class RecipesGridView extends StatelessWidget {
                     flipAxis: FlipAxis.y,
                     child: RecipeItem(
                       radius: 18.r,
-                      image: AppImages.calc,
+                      image: instane.data![index].img!,
                       backgroundColor: _recipeBackGroundItemColor(index),
                       borderColor: _recipeBorderItemColor(index),
-                      title: 'ali',
+                      title: instane.data![index].name!,
                       onTap: () {
                         PersistentNavBarNavigator.pushDynamicScreen(
                           context,

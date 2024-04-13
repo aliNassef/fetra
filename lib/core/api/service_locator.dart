@@ -3,6 +3,7 @@ import 'package:fetra/core/api/dio_consumer.dart';
 import 'package:fetra/core/cache/cache_helper.dart';
 import 'package:fetra/features/articles/data/repo/article_repo_impl.dart';
 import 'package:fetra/features/auth/sign_in/data/repo/sign_in_repo_impl.dart';
+ import 'package:fetra/features/recipes/data/repo/recipe_repo_impl.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../features/auth/sign_up/data/repo/sign_up_repo_impl.dart';
@@ -30,6 +31,12 @@ setupGetIt() async {
       api: getIt.get<DioConsumer>(),
     ),
   );
+  getIt.registerSingleton<RecipeRepoImpl>(
+    RecipeRepoImpl(
+      api: getIt.get<DioConsumer>(),
+    ),
+  );
+
   getIt.registerSingleton<CacheHelper>(
     CacheHelper(),
   );
