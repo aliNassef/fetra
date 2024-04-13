@@ -1,6 +1,6 @@
 import 'package:fetra/core/shared/widgets/custom_app_bar.dart';
-import 'package:fetra/generated/l10n.dart';
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
+import '../../../../localization/l10n.dart';
 import 'widgets/recipe_view_body.dart';
 
 class RecipesView extends StatelessWidget {

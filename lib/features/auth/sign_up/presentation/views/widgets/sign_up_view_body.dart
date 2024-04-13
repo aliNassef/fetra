@@ -12,7 +12,7 @@ import '../../../../../../core/shared/widgets/app_button.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_images.dart';
 import '../../../../../../core/utils/app_styles.dart';
-import '../../../../../../generated/l10n.dart';
+ import '../../../../../../localization/l10n.dart';
 import '../../../../sign_in/presentation/views/widgets/custom_auth_button.dart';
 import 'drop_down_gender.dart';
 
