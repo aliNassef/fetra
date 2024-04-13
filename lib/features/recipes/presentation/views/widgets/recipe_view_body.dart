@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/shared/functions/locale.dart';
 import '../../../../../core/utils/app_styles.dart';
- import '../../../../../localization/l10n.dart';
+import '../../../../../localization/l10n.dart';
 import 'recipes_grid_view.dart';
 
 class RecipesViewBody extends StatelessWidget {

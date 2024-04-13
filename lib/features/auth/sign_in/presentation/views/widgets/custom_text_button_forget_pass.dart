@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../../core/shared/functions/locale.dart';
 import '../../../../../../core/utils/app_styles.dart';
 import '../../../../../../localization/l10n.dart';
- 
+
 class CustomTextButtonForgetPass extends StatelessWidget {
   const CustomTextButtonForgetPass({
     super.key,

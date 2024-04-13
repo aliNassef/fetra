@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../core/shared/functions/locale.dart';
- import '../../../../../../localization/l10n.dart';
+import '../../../../../../localization/l10n.dart';
 import '../../view_model/cubit/sign_up_cubit.dart';
 
 class DropDownGender extends StatelessWidget {

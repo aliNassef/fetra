@@ -11,7 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../../../../../core/utils/app_images.dart';
- import '../../../../../localization/l10n.dart';
+import '../../../../../localization/l10n.dart';
 import '../../../../articles/presentations/view_model/get_all_category_cubit/get_all_category_cubit.dart';
 import 'home_item.dart';
 

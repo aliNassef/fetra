@@ -1,6 +1,6 @@
 import 'package:fetra/core/shared/widgets/custom_app_bar.dart';
 import 'package:fetra/features/videos/presentaton/views/widgets/video_view_body.dart';
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 import '../../../../localization/l10n.dart';
 

@@ -13,9 +13,7 @@ class VideoViewBody extends StatelessWidget {
           width: 400,
           decoration: const BoxDecoration(
             image: DecorationImage(
-               
               image: AssetImage(
-
                 AppImages.videoback,
               ),
             ),

@@ -1,6 +1,6 @@
 import 'package:fetra/features/articles/data/models/tab_bar_model/tab_bar_model.dart';
 import 'package:fetra/features/articles/data/repo/article_repo.dart';
- import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 
 part 'get_all_category_state.dart';
@@ -15,7 +15,7 @@ class ArticleCubit extends Cubit<ArticleState> {
     var data = await articleRepo.getTabBarData();
     data.fold(
       (l) {
-         emit(
+        emit(
           ArticleCategoryLoaded(model: l),
         );
       },
