@@ -1,5 +1,4 @@
-import 'package:fetra/features/recipes/data/models/recipe_model/recipe_model.dart';
-import 'package:fetra/features/recipes/presentation/view_model/recipes/recipes_cubit.dart';
+ import 'package:fetra/features/recipes/presentation/view_model/recipes/recipes_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
