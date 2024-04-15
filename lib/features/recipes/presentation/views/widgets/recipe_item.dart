@@ -40,7 +40,8 @@ class RecipeItem extends StatelessWidget {
               width: 73.w,
               fit: BoxFit.fill,
               imageUrl: image,
-              placeholder: (context, url) => const CircularProgressIndicator(),
+              placeholder: (context, url) =>
+                  const Center(child: CircularProgressIndicator()),
               errorWidget: (context, url, error) => const Icon(Icons.error),
             ),
             SizedBox(

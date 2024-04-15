@@ -1,10 +1,14 @@
 import 'package:fetra/features/recipes/data/models/recipe_model/recipe_model.dart';
+import 'package:fetra/features/recipes/data/repo/recipe_repo_impl.dart';
+import 'package:fetra/features/recipes/presentation/view_model/recipe_details_cubit/recipe_details_cubit.dart';
 import 'package:fetra/features/recipes/presentation/views/recipes_details_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
- import 'recipe_item.dart';
+import '../../../../../core/api/service_locator.dart';
+import 'recipe_item.dart';
 
 class RecipesGridView extends StatelessWidget {
   const RecipesGridView({
@@ -24,7 +28,7 @@ class RecipesGridView extends StatelessWidget {
               crossAxisSpacing: 22.w,
               mainAxisSpacing: 24.h,
             ),
-            itemCount: 10,
+            itemCount: instane.data!.length,
             itemBuilder: (context, index) {
               return AnimationConfiguration.staggeredList(
                 position: index,
@@ -45,15 +49,18 @@ class RecipesGridView extends StatelessWidget {
                       borderColor: _recipeBorderItemColor(index),
                       title: instane.data![index].name!,
                       onTap: () {
-                        PersistentNavBarNavigator.pushDynamicScreen(
+                        context.read<RecipeDetailsCubit>().getSpecificRecipe(
+                              instane.data![index].id!.toString(),
+                            );
+                        PersistentNavBarNavigator.pushNewScreen(
                           context,
-                          screen: MaterialPageRoute(
-                            builder: (context) {
-                              return Builder(
-                                builder: (context) =>
-                                    const RecipesDetailsView(),
-                              );
-                            },
+                          screen: BlocProvider(
+                            create: (context) =>
+                                RecipeDetailsCubit(getIt.get<RecipeRepoImpl>()),
+                            child: RecipesDetailsView(
+                              id: instane.data![index].id!.toString(),
+                              title: instane.data![index].name!,
+                            ),
                           ),
                         );
                       },

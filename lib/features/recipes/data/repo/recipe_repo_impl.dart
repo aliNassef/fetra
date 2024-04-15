@@ -4,6 +4,7 @@ import 'package:fetra/core/api/end_ponits.dart';
 import 'package:fetra/core/errors/exceptions.dart';
 
 import 'package:fetra/features/recipes/data/models/recipe_model/recipe_model.dart';
+import 'package:fetra/features/recipes/data/models/recipes_details_model/recipes_details_model.dart';
 
 import 'recipe_repo.dart';
 
@@ -16,6 +17,18 @@ class RecipeRepoImpl extends RecipeRepo {
     try {
       var response = await api.get(EndPoint.getMeals);
       var data = RecipeModel.fromJson(response);
+      return Left(data);
+    } on ServerException catch (e) {
+      return Right(e.errModel.message);
+    }
+  }
+
+  @override
+  Future<Either<RecipesDetailsModel, String>> getSpecificRecipe(
+      {required String id}) async {
+    try {
+      var response = await api.get('${EndPoint.getMealDetails}$id');
+      var data = RecipesDetailsModel.fromJson(response);
       return Left(data);
     } on ServerException catch (e) {
       return Right(e.errModel.message);

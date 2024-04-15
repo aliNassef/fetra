@@ -5,8 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/shared/functions/locale.dart';
 
 class RecipesDetailsViewBody extends StatelessWidget {
-  const RecipesDetailsViewBody({super.key});
-
+  const RecipesDetailsViewBody(
+      {super.key, required this.components, required this.recipe});
+  final String components;
+  final String recipe;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -30,11 +32,7 @@ class RecipesDetailsViewBody extends StatelessWidget {
           ),
           Text(
             textAlign: TextAlign.right,
-            '''حبة من كلٍّ من: الطماطم، والخيار، والفلفل الرومي الأخضر، والفلفل الرومي الأصفر، والفلفل الرومي الأحمر.
-      ثلاث ملاعق طعام من زيت الزيتون.
-      فلفل أسود. ملعقة صغيرة من الملح. 
-      ملعقة صغيرة من الكمون
-      ''',
+            components,
             style: AppStyles.textStyle13M.copyWith(
               color: const Color(0xff666666),
             ),
@@ -54,11 +52,7 @@ class RecipesDetailsViewBody extends StatelessWidget {
           ),
           Text(
             textAlign: TextAlign.right,
-            '''تقطيع الطماطم إلى جوانح وتقطيع كلّ من الخيار، والكرفس، والبصل الأخضر، والفلفل الرومي بأنواعه الثلاثة إلى شرائح. 
-خلط عصير الليمون، وزيت السمسم، وزيت الزيتون، والفلفل، والملح، والكمون لنحصل على التتبيلة. 
-خلط جميع الخضار مع أوراق السلطة الخضراء والفطر لنحصل على السلطة. 
-خلط السلطة مع التتبيلة ثمّ وضعها في وعاء التقديم
-      ''',
+            recipe,
             style: AppStyles.textStyle13M.copyWith(
               color: const Color(0xff666666),
             ),
