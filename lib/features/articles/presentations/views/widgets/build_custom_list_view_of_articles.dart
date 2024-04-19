@@ -67,14 +67,22 @@ class BuildCustomListViewOfArticles extends StatelessWidget {
               } else if (state is GetCategoryByIdFailure) {
                 return Center(child: Text(state.errMessage));
               } else {
-                return Center(
-                  child: SpinKitFadingCircle(
-                    itemBuilder: (BuildContext context, int index) {
-                      return const DecoratedBox(
-                        decoration: BoxDecoration(color: Color(0xffC4C4C4)),
-                      );
-                    },
-                  ),
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * .3,
+                    ),
+                    Center(
+                      child: SpinKitFadingCircle(
+                        itemBuilder: (BuildContext context, int index) {
+                          return const DecoratedBox(
+                            decoration: BoxDecoration(color: Color(0xffC4C4C4)),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
                 );
               }
             },
@@ -84,14 +92,22 @@ class BuildCustomListViewOfArticles extends StatelessWidget {
             child: Text(state.errMessage),
           );
         } else {
-          return Center(
-            child: SpinKitFadingCircle(
-              itemBuilder: (BuildContext context, int index) {
-                return const DecoratedBox(
-                  decoration: BoxDecoration(color: Color(0xffC4C4C4)),
-                );
-              },
-            ),
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * .3,
+              ),
+              Center(
+                child: SpinKitFadingCircle(
+                  itemBuilder: (BuildContext context, int index) {
+                    return const DecoratedBox(
+                      decoration: BoxDecoration(color: Color(0xffC4C4C4)),
+                    );
+                  },
+                ),
+              ),
+            ],
           );
         }
       },

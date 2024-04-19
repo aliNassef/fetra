@@ -1,5 +1,7 @@
+import 'package:fetra/core/shared/widgets/skelton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../../../core/shared/functions/locale.dart';
@@ -36,21 +38,18 @@ class BuildCustomTabBarItems extends StatelessWidget {
           return Directionality(
             textDirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
             child: SizedBox(
-              height: MediaQuery.of(context).size.height * .060,
+              height: 50.h,
               child: ListView.builder(
-                itemCount: 4,
+                physics: const BouncingScrollPhysics(),
+                itemCount: 10,
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
-                  return GestureDetector(
-                    onTap: () {
-                      context.read<ChangeTabItemCubitCubit>().changeTab(index);
-                    },
-                    child: Shimmer.fromColors(
-                      baseColor: Colors.grey[200]!,
-                      highlightColor: Colors.grey,
-                      child: TabBarItem(
-                        index: index,
-                      ),
+                  return Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.w),
+                    child: Skelton(
+                      height: 50.h,
+                      width: 100.w,
+                      radius: 10.r,
                     ),
                   );
                 },
