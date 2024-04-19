@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,9 +40,20 @@ class OnBoardingContent extends StatelessWidget {
           Positioned(
             top: MediaQuery.of(context).size.height * .78,
             left: MediaQuery.of(context).size.width * 0.1,
-            child: Text(
-              'احصل على نظام غذائي للصيام المتقطع',
-              style: AppStyles.onBoardingTitle,
+            child: AnimatedTextKit(
+              animatedTexts: [
+                TypewriterAnimatedText(
+                  'احصل على نظام غذائي للصيام المتقطع',
+                  textStyle: AppStyles.onBoardingTitle,
+                  speed: const Duration(
+                    milliseconds: 150,
+                  ),
+                ),
+              ],
+              isRepeatingAnimation: true,
+              repeatForever: true,
+              displayFullTextOnTap: true,
+              stopPauseOnTap: false,
             ),
           ),
           SizedBox(
