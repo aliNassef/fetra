@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
+  //84C245
   static const Color primarySwatchColor = Color(0xff4CAD73);
 //4CAD73
   static MaterialColor primaryColor =

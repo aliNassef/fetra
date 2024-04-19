@@ -5,8 +5,9 @@ class Skelton extends StatelessWidget {
     super.key,
     required this.height,
     required this.width,
+    this.radius = 16,
   });
-  final double height, width;
+  final double height, width, radius;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +16,7 @@ class Skelton extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.black.withOpacity(0.06),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(radius),
       ),
     );
   }
