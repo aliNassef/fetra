@@ -12,6 +12,7 @@ class VideoViewBody extends StatelessWidget {
       textDirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
       child: const Column(
         children: [
+          
           VideoGridView(),
         ],
       ),

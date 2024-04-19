@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/shared/functions/locale.dart';
 import '../../../../../core/utils/app_styles.dart';
 import '../../../../../localization/l10n.dart';
+import 'recipe_grid_view_loading_data.dart';
 import 'recipes_grid_view.dart';
 
 class RecipesViewBody extends StatefulWidget {
@@ -52,22 +53,7 @@ class _RecipesViewBodyState extends State<RecipesViewBody> {
                 } else if (state is RecipeDataFailure) {
                   return Text(state.errMessage);
                 } else {
-                  return Expanded(
-                    child: GridView.builder(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        crossAxisSpacing: 22.w,
-                        mainAxisSpacing: 24.h,
-                      ),
-                      itemCount: 10,
-                      itemBuilder: (context, index) {
-                        return Skelton(
-                          height: 145.h,
-                          width: 134.w,
-                        );
-                      },
-                    ),
-                  );
+                  return const RecipeGridViewLoadingData();
                 }
               },
             ),

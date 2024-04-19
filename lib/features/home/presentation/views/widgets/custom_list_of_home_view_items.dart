@@ -24,6 +24,7 @@ class CustomListOfHomeViewItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView(
+        physics: const BouncingScrollPhysics(),
         children: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 30.w),

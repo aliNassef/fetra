@@ -2,15 +2,12 @@ import 'package:fetra/core/shared/widgets/skelton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shimmer/shimmer.dart';
-
+ 
 import '../../../../../core/shared/functions/locale.dart';
-import '../../view_model/change_tab_item_cubit/change_tab_item_cubit_cubit.dart';
-import '../../view_model/get_all_category_cubit/get_all_category_cubit.dart';
+ import '../../view_model/get_all_category_cubit/get_all_category_cubit.dart';
 import '../../view_model/get_categry_by_id/get_category_by_id_cubit.dart';
 import 'custom_tab_bar_items.dart';
-import 'tab_bar_item.dart';
-
+ 
 class BuildCustomTabBarItems extends StatelessWidget {
   const BuildCustomTabBarItems({super.key});
 

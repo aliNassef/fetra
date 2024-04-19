@@ -17,6 +17,7 @@ class CustomTabBaritems extends StatelessWidget {
       child: SizedBox(
         height: MediaQuery.of(context).size.height * .060,
         child: ListView.builder(
+          physics: const BouncingScrollPhysics(),
           itemCount: model.data!.length,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
