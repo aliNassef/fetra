@@ -331,6 +331,16 @@ class S {
       args: [],
     );
   }
+
+  /// `قياس الدهون`
+  String get fat_calc {
+    return Intl.message(
+      'قياس الدهون',
+      name: 'fat_calc',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

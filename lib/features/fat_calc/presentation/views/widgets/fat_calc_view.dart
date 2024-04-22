@@ -1,7 +1,7 @@
 import 'package:fetra/core/shared/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
- import '../../../../../generated/l10n.dart';
+import '../../../../../generated/l10n.dart';
 import 'fat_calc_view_body.dart';
 
 class FatCalcView extends StatelessWidget {
@@ -10,7 +10,7 @@ class FatCalcView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppbar(title: S.of(context).calc_fats),
+      appBar: CustomAppbar(title: S.of(context).fat_calc),
       body: const FatClacViewBody(),
     );
   }

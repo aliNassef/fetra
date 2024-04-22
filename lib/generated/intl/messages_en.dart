@@ -30,6 +30,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "coaches": MessageLookupByLibrary.simpleMessage("مدربين"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
+        "fat_calc": MessageLookupByLibrary.simpleMessage("قياس الدهون"),
         "female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "forgetpass": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "haveAccount":
