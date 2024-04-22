@@ -1,4 +1,3 @@
-import 'package:fetra/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'widgets/home_view_body.dart';
@@ -13,9 +12,9 @@ class HomeView extends StatelessWidget {
         preferredSize: const Size.fromHeight(0),
         child: AppBar(
           elevation: 0,
-          systemOverlayStyle: SystemUiOverlayStyle(
+          systemOverlayStyle: const SystemUiOverlayStyle(
             systemNavigationBarColor: Colors.white,
-            statusBarColor: AppColors.primaryColor,
+            statusBarColor: Color(0xff4DAD73),
             statusBarIconBrightness: Brightness.light,
             statusBarBrightness: Brightness.dark,
           ),

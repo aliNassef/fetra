@@ -20,6 +20,8 @@ class VideoGridViewItem extends StatelessWidget {
         Text(
           'هل الاكل الصحي مفيد؟\n ولماذا؟',
           style: AppStyles.textStyle10SB,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
         ),
       ],
     );

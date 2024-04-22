@@ -11,9 +11,9 @@ class TabBarItem extends StatelessWidget {
   const TabBarItem({
     super.key,
     required this.index,
-    this.model,
+    required this.model,
   });
-  final TabBarModel? model;
+  final TabBarModel model;
   final int index;
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class TabBarItem extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 3.w),
             child: Text(
-              model?.data![index].name! ?? 'no data',
+              model.data![index].name!,
               style:
                   context.read<ChangeTabItemCubitCubit>().curentIndex != index
                       ? AppStyles.textStyle16R

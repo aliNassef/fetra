@@ -1,6 +1,8 @@
 import 'package:fetra/core/shared/functions/locale.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'custom_tab_bar.dart';
 import 'video_grid_view.dart';
 
 class VideoViewBody extends StatelessWidget {
@@ -10,10 +12,16 @@ class VideoViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
-      child: const Column(
+      child: Column(
         children: [
-          
-          VideoGridView(),
+          SizedBox(
+            height: 21.h,
+          ),
+          const CutomTabBar(),
+          SizedBox(
+            height: 42.h,
+          ),
+          const VideoGridView(),
         ],
       ),
     );
