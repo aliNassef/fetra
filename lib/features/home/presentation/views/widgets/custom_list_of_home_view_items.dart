@@ -3,6 +3,7 @@ import 'package:fetra/features/articles/data/repo/article_repo_impl.dart';
 import 'package:fetra/features/articles/presentations/view_model/change_tab_item_cubit/change_tab_item_cubit_cubit.dart';
 import 'package:fetra/features/articles/presentations/view_model/get_categry_by_id/get_category_by_id_cubit.dart';
 import 'package:fetra/features/articles/presentations/views/articles_view.dart';
+import 'package:fetra/features/fat_calc/presentation/views/widgets/fat_calc_view.dart';
 import 'package:fetra/features/recipes/presentation/views/recipes_view.dart';
 import 'package:fetra/features/videos/presentaton/views/video_view.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +12,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../../../../../core/utils/app_images.dart';
-import '../../../../../localization/l10n.dart';
-import '../../../../articles/presentations/view_model/get_all_category_cubit/get_all_category_cubit.dart';
+import '../../../../../generated/l10n.dart';
+ import '../../../../articles/presentations/view_model/get_all_category_cubit/get_all_category_cubit.dart';
 import 'home_item.dart';
 
 class CustomListOfHomeViewItems extends StatelessWidget {
@@ -70,6 +71,12 @@ class CustomListOfHomeViewItems extends StatelessWidget {
                 ),
                 Expanded(
                   child: HomeItem(
+                    onTap: () {
+                      PersistentNavBarNavigator.pushNewScreen(
+                        context,
+                        screen: const FatCalcView(),
+                      );
+                    },
                     image: AppImages.calc,
                     title: S.of(context).calc_fats,
                     radius: 18,

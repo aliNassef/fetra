@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/shared/functions/locale.dart';
 import '../../../../../core/utils/app_styles.dart';
-import '../../../../../localization/l10n.dart';
+ import '../../../../../generated/l10n.dart';
 import 'recipe_grid_view_loading_data.dart';
 import 'recipes_grid_view.dart';
 

@@ -10,7 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../../core/utils/app_router.dart';
-import '../../../../../../localization/l10n.dart';
+ import '../../../../../../generated/l10n.dart';
 import '../../view_model/sign_in_cubit/sign_in_state.dart';
 import 'custom_auth_button.dart';
 import 'custom_text_button_forget_pass.dart';

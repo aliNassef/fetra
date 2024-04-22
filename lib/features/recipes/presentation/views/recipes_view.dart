@@ -5,7 +5,7 @@ import 'package:fetra/features/recipes/presentation/view_model/recipe_details_cu
 import 'package:fetra/features/recipes/presentation/view_model/recipes/recipes_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../localization/l10n.dart';
+ import '../../../../generated/l10n.dart';
 import 'widgets/recipe_view_body.dart';
 
 class RecipesView extends StatelessWidget {

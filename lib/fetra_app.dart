@@ -4,9 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/utils/app_router.dart';
 import 'core/utils/app_theme.dart';
-import 'localization/l10n.dart';
-
-class Fetra extends StatelessWidget {
+import 'generated/l10n.dart';
+ class Fetra extends StatelessWidget {
   const Fetra({super.key});
 
   @override
