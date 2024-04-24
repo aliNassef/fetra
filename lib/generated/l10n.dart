@@ -341,6 +341,76 @@ class S {
       args: [],
     );
   }
+
+  /// `الوسط`
+  String get middle {
+    return Intl.message(
+      'الوسط',
+      name: 'middle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الرقبة`
+  String get neck {
+    return Intl.message(
+      'الرقبة',
+      name: 'neck',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الوزن`
+  String get weight {
+    return Intl.message(
+      'الوزن',
+      name: 'weight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الطول`
+  String get tall {
+    return Intl.message(
+      'الطول',
+      name: 'tall',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `سم`
+  String get cm {
+    return Intl.message(
+      'سم',
+      name: 'cm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كجم`
+  String get kilo {
+    return Intl.message(
+      'كجم',
+      name: 'kilo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `احسب`
+  String get calc {
+    return Intl.message(
+      'احسب',
+      name: 'calc',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

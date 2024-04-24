@@ -10,13 +10,18 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppbar({
     super.key,
     required this.title,
+    this.bottom,
+    this.appBarHeight,
   });
   final String title;
+  final PreferredSizeWidget? bottom;
+  final double? appBarHeight;
   @override
   Widget build(BuildContext context) {
     return PreferredSize(
-      preferredSize: Size.fromHeight(60.h),
+      preferredSize: Size.fromHeight(appBarHeight ?? 60.h),
       child: AppBar(
+        bottom: bottom,
         elevation: 0,
         centerTitle: true,
         leading: GestureDetector(
@@ -47,5 +52,5 @@ class CustomAppbar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(60.h);
+  Size get preferredSize => Size.fromHeight(appBarHeight ?? 60.h);
 }

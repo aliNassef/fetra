@@ -11,7 +11,7 @@ class FatCalcView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppbar(title: S.of(context).fat_calc),
-      body: const FatClacViewBody(),
+      body: const FatCalcViewBody(),
     );
   }
 }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 abstract class AppColors {
   //84C245
   static const Color primarySwatchColor = Color(0xff4CAD73);
-//4CAD73
+//4CAD73 
   static MaterialColor primaryColor =
       const MaterialColor(0xFF4CAD73, <int, Color>{
     50: Color(0x1A4CAD73),

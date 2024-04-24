@@ -24,18 +24,25 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "articles": MessageLookupByLibrary.simpleMessage("مقالات"),
+        "calc": MessageLookupByLibrary.simpleMessage("احسب"),
         "calc_fats": MessageLookupByLibrary.simpleMessage("حساب الدهون"),
         "calc_fats_paid":
             MessageLookupByLibrary.simpleMessage("حساب دهون مدفوع"),
+        "cm": MessageLookupByLibrary.simpleMessage("سم"),
         "coaches": MessageLookupByLibrary.simpleMessage("مدربين"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "fat_calc": MessageLookupByLibrary.simpleMessage("قياس الدهون"),
+        "female": MessageLookupByLibrary.simpleMessage("مرأة"),
         "forgetpass": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "haveAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟"),
+        "kilo": MessageLookupByLibrary.simpleMessage("كجم"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "male": MessageLookupByLibrary.simpleMessage("رجل"),
+        "middle": MessageLookupByLibrary.simpleMessage("الوسط"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "neck": MessageLookupByLibrary.simpleMessage("الرقبة"),
         "onBoardingText": MessageLookupByLibrary.simpleMessage(
             "احصل على نظام غذائي للصيام المتقطع"),
         "pass": MessageLookupByLibrary.simpleMessage("كلمة السر"),
@@ -50,7 +57,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "start": MessageLookupByLibrary.simpleMessage("إبدأ"),
         "subButton1": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "subButton11": MessageLookupByLibrary.simpleMessage("انشئ حساب"),
+        "tall": MessageLookupByLibrary.simpleMessage("الطول"),
         "type": MessageLookupByLibrary.simpleMessage("النوع"),
-        "videos": MessageLookupByLibrary.simpleMessage("مقاطع الفيديو")
+        "videos": MessageLookupByLibrary.simpleMessage("مقاطع الفيديو"),
+        "weight": MessageLookupByLibrary.simpleMessage("الوزن")
       };
 }

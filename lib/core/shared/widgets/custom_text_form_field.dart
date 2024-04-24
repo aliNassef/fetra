@@ -1,3 +1,4 @@
+import 'package:fetra/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -13,6 +14,8 @@ class CustomTextFormField extends StatelessWidget {
     this.prefixIcon,
     this.contentPadding,
     this.obescureText = false,
+    this.hintStyle,
+    this.keyboardType,
   });
   final TextEditingController input;
   final String hint;
@@ -24,16 +27,22 @@ class CustomTextFormField extends StatelessWidget {
   final Widget? prefixIcon;
   final EdgeInsetsGeometry? contentPadding;
   final bool obescureText;
+  final TextStyle? hintStyle;
+  final TextInputType? keyboardType;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType ,
+      cursorColor: AppColors.primarySwatchColor,
       obscureText: obescureText,
       controller: input,
       decoration: InputDecoration(
+        focusColor: AppColors.primarySwatchColor,
         contentPadding: contentPadding,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         hintText: hint,
+        hintStyle: hintStyle,
         fillColor: backgroundColor,
         filled: fillColor,
         enabledBorder: OutlineInputBorder(

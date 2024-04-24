@@ -7,20 +7,24 @@ class AppButton extends StatelessWidget {
     this.onPressed,
     this.backgroundColor,
     required this.text,
-    this.borderColor,
+    this.padding,
+    this.borderColor,   this.radius = 10,
   });
   final void Function()? onPressed;
+  final EdgeInsetsGeometry? padding;
   final Color? backgroundColor;
   final Widget text;
   final Color? borderColor;
+  final double radius;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
+        padding: padding,
         decoration: BoxDecoration(
             color: backgroundColor,
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(radius),
             border: Border.all(color: borderColor ?? Colors.transparent)),
         margin: EdgeInsets.symmetric(horizontal: 20.w),
         height: 54.h,
