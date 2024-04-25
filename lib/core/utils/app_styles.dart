@@ -36,6 +36,11 @@ abstract class AppStyles {
     fontWeight: FontWeight.w500,
     fontFamily: 'Cairo',
   );
+    static final textStyle14SB = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight. w600,
+    fontFamily: 'Cairo',
+  );
   static final authText = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.bold,
@@ -54,6 +59,11 @@ abstract class AppStyles {
     fontWeight: FontWeight.w400,
     fontFamily: 'Cairo',
     color: Colors.white,
+  );
+  static final textStyle16SB = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Cairo',
   );
   static final textStyle14R = TextStyle(
     fontSize: 14.sp,
