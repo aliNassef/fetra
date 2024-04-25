@@ -411,6 +411,96 @@ class S {
       args: [],
     );
   }
+
+  /// `القياسات`
+  String get measure {
+    return Intl.message(
+      'القياسات',
+      name: 'measure',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أسفل الظهر`
+  String get below_back {
+    return Intl.message(
+      'أسفل الظهر',
+      name: 'below_back',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `طريقة أخذ القياسات الصحيحة للرقبة`
+  String get title_measure_neck {
+    return Intl.message(
+      'طريقة أخذ القياسات الصحيحة للرقبة',
+      name: 'title_measure_neck',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الصحة`
+  String get health {
+    return Intl.message(
+      'الصحة',
+      name: 'health',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `النحافة`
+  String get thickness {
+    return Intl.message(
+      'النحافة',
+      name: 'thickness',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الرياضة`
+  String get sport {
+    return Intl.message(
+      'الرياضة',
+      name: 'sport',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `التالي`
+  String get next {
+    return Intl.message(
+      'التالي',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `طريقة أخذ القياسات الصحيحة للوسط`
+  String get title_measure_middle {
+    return Intl.message(
+      'طريقة أخذ القياسات الصحيحة للوسط',
+      name: 'title_measure_middle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `طريقة أخذ القياسات الصحيحة لأسفل الظهر`
+  String get title_measure_below_back {
+    return Intl.message(
+      'طريقة أخذ القياسات الصحيحة لأسفل الظهر',
+      name: 'title_measure_below_back',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,5 +1,7 @@
 import 'package:fetra/features/articles/presentations/views/article_details_view.dart';
 import 'package:fetra/features/layout/presentation/views/layout_view.dart';
+import 'package:fetra/features/measure/presentation/views/measure_view.dart';
+import 'package:fetra/features/measure/presentation/views/neck_measure_view.dart';
 import 'package:fetra/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -17,6 +19,8 @@ abstract class AppRouter {
   static const layout = '/layOutView';
   static const articleDetailsView = '/ArticleDetailsView';
   static const articleView = '/ArticleView';
+  static const measureView = '/MeasureView';
+  static const neckMeasureView = '/NeckMeasureView';
   static final GoRouter router = GoRouter(
     routes: <RouteBase>[
       GoRoute(
@@ -59,6 +63,18 @@ abstract class AppRouter {
         path: articleDetailsView,
         builder: (BuildContext context, GoRouterState state) {
           return const ArticleDetailsView();
+        },
+      ),
+      GoRoute(
+        path: measureView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const MeasureView();
+        },
+      ),
+      GoRoute(
+        path: neckMeasureView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const NeckMeasureView();
         },
       ),
     ],

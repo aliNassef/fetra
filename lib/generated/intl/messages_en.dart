@@ -24,6 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "articles": MessageLookupByLibrary.simpleMessage("مقالات"),
+        "below_back": MessageLookupByLibrary.simpleMessage("أسفل الظهر"),
         "calc": MessageLookupByLibrary.simpleMessage("احسب"),
         "calc_fats": MessageLookupByLibrary.simpleMessage("حساب الدهون"),
         "calc_fats_paid":
@@ -37,12 +38,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgetpass": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "haveAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟"),
+        "health": MessageLookupByLibrary.simpleMessage("الصحة"),
         "kilo": MessageLookupByLibrary.simpleMessage("كجم"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
+        "measure": MessageLookupByLibrary.simpleMessage("القياسات"),
         "middle": MessageLookupByLibrary.simpleMessage("الوسط"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "neck": MessageLookupByLibrary.simpleMessage("الرقبة"),
+        "next": MessageLookupByLibrary.simpleMessage("التالي"),
         "onBoardingText": MessageLookupByLibrary.simpleMessage(
             "احصل على نظام غذائي للصيام المتقطع"),
         "pass": MessageLookupByLibrary.simpleMessage("كلمة السر"),
@@ -56,10 +60,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "search": MessageLookupByLibrary.simpleMessage("البحث"),
         "sign": MessageLookupByLibrary.simpleMessage("سجل"),
         "signNow": MessageLookupByLibrary.simpleMessage("سجل دخول"),
+        "sport": MessageLookupByLibrary.simpleMessage("الرياضة"),
         "start": MessageLookupByLibrary.simpleMessage("إبدأ"),
         "subButton1": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "subButton11": MessageLookupByLibrary.simpleMessage("انشئ حساب"),
         "tall": MessageLookupByLibrary.simpleMessage("الطول"),
+        "thickness": MessageLookupByLibrary.simpleMessage("النحافة"),
+        "title_measure_below_back": MessageLookupByLibrary.simpleMessage(
+            "طريقة أخذ القياسات الصحيحة لأسفل الظهر"),
+        "title_measure_middle": MessageLookupByLibrary.simpleMessage(
+            "طريقة أخذ القياسات الصحيحة للوسط"),
+        "title_measure_neck": MessageLookupByLibrary.simpleMessage(
+            "طريقة أخذ القياسات الصحيحة للرقبة"),
         "type": MessageLookupByLibrary.simpleMessage("النوع"),
         "videos": MessageLookupByLibrary.simpleMessage("مقاطع الفيديو"),
         "weight": MessageLookupByLibrary.simpleMessage("الوزن")
