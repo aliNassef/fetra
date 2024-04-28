@@ -23,14 +23,18 @@ class SignUpCubit extends Cubit<SignUpState> {
       name: signUpname.text,
       email: signUpEmail.text,
       pass: signUpPass.text,
-      type: 'male',
+      type: signUpGender.text,
       age: signUpAge.text,
       phone: signUpPhone.text,
     );
 
     response.fold(
-      (l) => emit(FailureSignUp()),
-      (r) => emit(SuccessSignUp()),
+      (l) => emit(FailureSignUp(
+        errMessage: l,
+      )),
+      (r) => emit(SuccessSignUp(
+        message: r.message!,
+      )),
     );
   }
 }

@@ -1,3 +1,5 @@
+import 'package:fetra/features/on_boarding/presentation/views/widgets/on_boarding_view_body.dart';
+
 import '../../../../core/api/end_ponits.dart';
 import '../../../../core/cache/cache_helper.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -30,7 +32,7 @@ class OnBoardingView extends StatelessWidget {
       backgroundColor: AppColors.primarySwatchColor,
       body: CacheHelper().getData(key: ApiKey.token) != null
           ? const LayOutView()
-          : const LayOutView(),
+          : const OnBoardingViewBody(),
     );
   }
 }

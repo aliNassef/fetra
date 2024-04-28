@@ -1,5 +1,5 @@
 class EndPoint {
-  static const baseUrl = "https://fetra.testm.online/";
+  static const baseUrl = "https://fetra.tek-part.com/";
 
   static const userLogin = 'api/login';
   static const userRegister = 'api/register';

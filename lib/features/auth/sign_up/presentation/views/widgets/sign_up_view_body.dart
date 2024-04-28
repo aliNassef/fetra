@@ -1,3 +1,5 @@
+import 'package:fetra/core/shared/functions/toast_dialog.dart';
+
 import '../../../../../../core/utils/app_router.dart';
 import '../../view_model/cubit/sign_up_cubit.dart';
 import '../../view_model/cubit/sign_up_state.dart';
@@ -12,7 +14,7 @@ import '../../../../../../core/shared/widgets/app_button.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_images.dart';
 import '../../../../../../core/utils/app_styles.dart';
- import '../../../../../../generated/l10n.dart';
+import '../../../../../../generated/l10n.dart';
 import '../../../../sign_in/presentation/views/widgets/custom_auth_button.dart';
 import 'drop_down_gender.dart';
 
@@ -117,9 +119,10 @@ class SignUpViewBody extends StatelessWidget {
             BlocListener<SignUpCubit, SignUpState>(
               listener: (context, state) {
                 if (state is SuccessSignUp) {
+                  showToast(text: state.message);
                   context.go(AppRouter.layout);
                 } else if (state is FailureSignUp) {
-                  debugPrint('Failure');
+                  showToast(text: state.errMessage);
                 }
               },
               child: AppButton(

@@ -1,8 +1,9 @@
+import '../../../../../../core/shared/functions/toast_dialog.dart';
 import '../../../../../../core/shared/widgets/app_button.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_images.dart';
 import '../../../../../../core/utils/app_styles.dart';
-import '../../view_model/sign_in_cubit/sign_in_cubit.dart';
+import 'package:fetra/features/auth/sign_in/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,7 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../../core/utils/app_router.dart';
- import '../../../../../../generated/l10n.dart';
+import '../../../../../../generated/l10n.dart';
 import '../../view_model/sign_in_cubit/sign_in_state.dart';
 import 'custom_auth_button.dart';
 import 'custom_text_button_forget_pass.dart';
@@ -89,24 +90,10 @@ class SignInViewBody extends StatelessWidget {
             BlocListener<SignInCubit, SignInState>(
               listener: (context, state) {
                 if (state is SuccessLogIn) {
-                  showDialog(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        title: Text(state.message),
-                      );
-                    },
-                  );
+                  showToast(text: state.message);
                   context.go(AppRouter.layout);
                 } else if (state is FailureLogIn) {
-                  showDialog(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        title: Text(state.errMessage),
-                      );
-                    },
-                  );
+                  showToast(text: state.errMessage);
                 } else {}
               },
               child: AppButton(
