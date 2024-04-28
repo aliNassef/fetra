@@ -1,5 +1,5 @@
-import 'package:fetra/core/utils/app_router.dart';
-import 'package:fetra/features/articles/presentations/views/widgets/article_item.dart';
+import '../../../../../core/utils/app_router.dart';
+import 'article_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';

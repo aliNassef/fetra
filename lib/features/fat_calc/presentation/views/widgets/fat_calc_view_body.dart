@@ -1,9 +1,9 @@
-import 'package:fetra/core/shared/widgets/app_button.dart';
-import 'package:fetra/core/utils/app_colors.dart';
-import 'package:fetra/core/utils/app_images.dart';
-import 'package:fetra/core/utils/app_styles.dart';
-import 'package:fetra/features/fat_calc/presentation/views/female_fat_calc_view.dart';
-import 'package:fetra/features/fat_calc/presentation/views/man_fat_calc_view.dart';
+import '../../../../../core/shared/widgets/app_button.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_images.dart';
+import '../../../../../core/utils/app_styles.dart';
+import '../female_fat_calc_view.dart';
+import '../man_fat_calc_view.dart';
  import 'package:flutter/material.dart';
  import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';

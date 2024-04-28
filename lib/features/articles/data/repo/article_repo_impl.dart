@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:fetra/core/api/api_consumer.dart';
-import 'package:fetra/core/api/end_ponits.dart';
-import 'package:fetra/core/errors/exceptions.dart';
-import 'package:fetra/features/articles/data/models/article_model/article_model.dart';
-import 'package:fetra/features/articles/data/models/tab_bar_model/tab_bar_model.dart';
-import 'package:fetra/features/articles/data/repo/article_repo.dart';
+import '../../../../core/api/api_consumer.dart';
+import '../../../../core/api/end_ponits.dart';
+import '../../../../core/errors/exceptions.dart';
+import '../models/article_model/article_model.dart';
+import '../models/tab_bar_model/tab_bar_model.dart';
+import 'article_repo.dart';
 
 class ArticleRepoImpl extends ArticleRepo {
   final ApiConsumer api;

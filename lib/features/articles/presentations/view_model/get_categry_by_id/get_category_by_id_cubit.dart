@@ -1,5 +1,5 @@
-import 'package:fetra/features/articles/data/models/article_model/article_model.dart';
-import 'package:fetra/features/articles/data/repo/article_repo.dart';
+import '../../../data/models/article_model/article_model.dart';
+import '../../../data/repo/article_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 

@@ -1,4 +1,4 @@
-import 'package:fetra/core/shared/widgets/skelton.dart';
+import '../../../../../core/shared/widgets/skelton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

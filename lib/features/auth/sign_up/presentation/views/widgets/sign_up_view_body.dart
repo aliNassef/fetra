@@ -1,6 +1,6 @@
-import 'package:fetra/core/utils/app_router.dart';
-import 'package:fetra/features/auth/sign_up/presentation/view_model/cubit/sign_up_cubit.dart';
-import 'package:fetra/features/auth/sign_up/presentation/view_model/cubit/sign_up_state.dart';
+import '../../../../../../core/utils/app_router.dart';
+import '../../view_model/cubit/sign_up_cubit.dart';
+import '../../view_model/cubit/sign_up_state.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,4 +1,4 @@
-import 'package:fetra/core/utils/app_styles.dart';
+import '../../../../../core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

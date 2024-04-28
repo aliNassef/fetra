@@ -1,8 +1,8 @@
-import 'package:fetra/core/shared/widgets/app_button.dart';
-import 'package:fetra/core/utils/app_colors.dart';
-import 'package:fetra/core/utils/app_images.dart';
-import 'package:fetra/core/utils/app_router.dart';
-import 'package:fetra/core/utils/app_styles.dart';
+import '../../../../core/shared/widgets/app_button.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_images.dart';
+import '../../../../core/utils/app_router.dart';
+import '../../../../core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';

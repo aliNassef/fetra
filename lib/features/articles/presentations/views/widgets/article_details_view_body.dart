@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fetra/core/utils/app_images.dart';
-import 'package:fetra/core/utils/app_styles.dart';
-import 'package:fetra/features/articles/data/models/article_model/datum.dart';
+import '../../../../../core/utils/app_images.dart';
+import '../../../../../core/utils/app_styles.dart';
+import '../../../data/models/article_model/datum.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';

@@ -1,8 +1,8 @@
-import 'package:fetra/core/api/service_locator.dart';
-import 'package:fetra/core/shared/widgets/custom_app_bar.dart';
-import 'package:fetra/features/recipes/data/repo/recipe_repo_impl.dart';
-import 'package:fetra/features/recipes/presentation/view_model/recipe_details_cubit/recipe_details_cubit.dart';
-import 'package:fetra/features/recipes/presentation/view_model/recipes/recipes_cubit.dart';
+import '../../../../core/api/service_locator.dart';
+import '../../../../core/shared/widgets/custom_app_bar.dart';
+import '../../data/repo/recipe_repo_impl.dart';
+import '../view_model/recipe_details_cubit/recipe_details_cubit.dart';
+import '../view_model/recipes/recipes_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
  import '../../../../generated/l10n.dart';

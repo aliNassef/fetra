@@ -1,8 +1,8 @@
-import 'package:fetra/features/articles/presentations/views/article_details_view.dart';
-import 'package:fetra/features/layout/presentation/views/layout_view.dart';
-import 'package:fetra/features/measure/presentation/views/measure_view.dart';
-import 'package:fetra/features/measure/presentation/views/neck_measure_view.dart';
-import 'package:fetra/features/on_boarding/presentation/views/on_boarding_view.dart';
+import '../../features/articles/presentations/views/article_details_view.dart';
+import '../../features/layout/presentation/views/layout_view.dart';
+import '../../features/measure/presentation/views/measure_view.dart';
+import '../../features/measure/presentation/views/neck_measure_view.dart';
+import '../../features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

@@ -1,6 +1,6 @@
-import 'package:fetra/core/shared/functions/locale.dart';
-import 'package:fetra/features/measure/presentation/views/widgets/custom_sub_titles.dart';
-import 'package:fetra/features/measure/presentation/views/widgets/video_banner.dart';
+import '../../../../../core/shared/functions/locale.dart';
+import '../../../../measure/presentation/views/widgets/custom_sub_titles.dart';
+import '../../../../measure/presentation/views/widgets/video_banner.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

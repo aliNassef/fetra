@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:fetra/core/api/api_consumer.dart';
-import 'package:fetra/core/api/end_ponits.dart';
-import 'package:fetra/core/cache/cache_helper.dart';
-import 'package:fetra/core/errors/exceptions.dart';
-import 'package:fetra/features/auth/sign_in/data/models/sign_in_model.dart';
+import '../../../../../core/api/api_consumer.dart';
+import '../../../../../core/api/end_ponits.dart';
+import '../../../../../core/cache/cache_helper.dart';
+import '../../../../../core/errors/exceptions.dart';
+import '../models/sign_in_model.dart';
 
 import 'sign_in_repo.dart';
 

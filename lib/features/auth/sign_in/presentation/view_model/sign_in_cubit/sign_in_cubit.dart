@@ -1,4 +1,4 @@
-import 'package:fetra/features/auth/sign_in/data/repo/sign_in_repo.dart';
+import '../../../data/repo/sign_in_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

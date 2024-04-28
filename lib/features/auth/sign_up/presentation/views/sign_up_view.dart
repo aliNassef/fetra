@@ -1,5 +1,5 @@
-import 'package:fetra/core/api/service_locator.dart';
-import 'package:fetra/features/auth/sign_up/presentation/view_model/cubit/sign_up_cubit.dart';
+import '../../../../../core/api/service_locator.dart';
+import '../view_model/cubit/sign_up_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

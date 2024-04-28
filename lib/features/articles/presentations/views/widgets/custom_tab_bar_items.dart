@@ -1,4 +1,4 @@
-import 'package:fetra/features/articles/data/models/tab_bar_model/tab_bar_model.dart';
+import '../../../data/models/tab_bar_model/tab_bar_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

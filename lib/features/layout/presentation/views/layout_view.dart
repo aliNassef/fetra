@@ -1,6 +1,6 @@
-import 'package:fetra/core/utils/app_colors.dart';
-import 'package:fetra/features/auth/sign_in/presentation/views/sign_in_view.dart';
-import 'package:fetra/features/home/presentation/views/home_view.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../auth/sign_in/presentation/views/sign_in_view.dart';
+import '../../../home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';

@@ -1,6 +1,6 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:fetra/core/utils/app_colors.dart';
-import 'package:fetra/core/utils/app_styles.dart';
+import '../../../../../../core/utils/app_colors.dart';
+import '../../../../../../core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

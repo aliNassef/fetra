@@ -1,7 +1,7 @@
-import 'package:fetra/features/recipes/data/models/recipe_model/recipe_model.dart';
-import 'package:fetra/features/recipes/data/repo/recipe_repo_impl.dart';
-import 'package:fetra/features/recipes/presentation/view_model/recipe_details_cubit/recipe_details_cubit.dart';
-import 'package:fetra/features/recipes/presentation/views/recipes_details_view.dart';
+import '../../../data/models/recipe_model/recipe_model.dart';
+import '../../../data/repo/recipe_repo_impl.dart';
+import '../../view_model/recipe_details_cubit/recipe_details_cubit.dart';
+import '../recipes_details_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

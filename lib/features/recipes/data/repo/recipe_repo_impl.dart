@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:fetra/core/api/api_consumer.dart';
-import 'package:fetra/core/api/end_ponits.dart';
-import 'package:fetra/core/errors/exceptions.dart';
+import '../../../../core/api/api_consumer.dart';
+import '../../../../core/api/end_ponits.dart';
+import '../../../../core/errors/exceptions.dart';
 
-import 'package:fetra/features/recipes/data/models/recipe_model/recipe_model.dart';
-import 'package:fetra/features/recipes/data/models/recipes_details_model/recipes_details_model.dart';
+import '../models/recipe_model/recipe_model.dart';
+import '../models/recipes_details_model/recipes_details_model.dart';
 
 import 'recipe_repo.dart';
 

@@ -1,7 +1,7 @@
-import 'package:fetra/features/recipes/data/repo/recipe_repo.dart';
+import '../../../data/repo/recipe_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:fetra/features/recipes/data/models/recipes_details_model/recipes_details_model.dart';
+import '../../../data/models/recipes_details_model/recipes_details_model.dart';
 
 part 'recipe_details_state.dart';
 

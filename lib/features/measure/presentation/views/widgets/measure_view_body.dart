@@ -1,5 +1,5 @@
-import 'package:fetra/features/measure/presentation/views/neck_measure_view.dart';
-import 'package:fetra/generated/l10n.dart';
+import '../neck_measure_view.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
