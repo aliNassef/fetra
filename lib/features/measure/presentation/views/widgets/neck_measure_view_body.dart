@@ -1,3 +1,5 @@
+import 'package:flutter/widgets.dart';
+
 import '../../../../../core/shared/functions/locale.dart';
 import '../../../../../core/shared/widgets/app_button.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -65,16 +67,14 @@ class NeckMeasureViewBody extends StatelessWidget {
             SizedBox(
               height: 15.h,
             ),
-            Text(
-              maxLines: 6,
-              'يتم أاذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآناذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآناذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآناذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآناذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآناذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآنخذ أصغر للوسط',
-              style: AppStyles.textStyle13M.copyWith(
-                color: const Color(0xff666666),
-                overflow: TextOverflow.ellipsis,
+            Expanded(
+              child: Text(
+                'يتم أخذ أصغر مقاس للرقبة تحت الحنجرة (تفاحة آدم)',
+                style: AppStyles.textStyle13M.copyWith(
+                  color: const Color(0xff666666),
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
-            ),
-            SizedBox(
-              height: 30.h,
             ),
             AppButton(
               onPressed: () => PersistentNavBarNavigator.pushNewScreen(
@@ -86,7 +86,10 @@ class NeckMeasureViewBody extends StatelessWidget {
                 S.of(context).next,
                 style: AppStyles.textStyle18SB.copyWith(color: Colors.white),
               ),
-            )
+            ),
+            SizedBox(
+              height: 30.h,
+            ),
           ],
         ),
       ),

@@ -66,16 +66,14 @@ class MiddleMeasureViewBody extends StatelessWidget {
             SizedBox(
               height: 15.h,
             ),
-            Text(
-              maxLines: 6,
-              'يتم أاذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآناذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآناذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآناذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآناذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآناذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا اذا كنت مهتم بالحصول على نظامك الصحي الآن, فقط انضم الينا الآنخذ أصغر للوسط',
-              style: AppStyles.textStyle13M.copyWith(
-                color: const Color(0xff666666),
-                overflow: TextOverflow.ellipsis,
+            Expanded(
+              child: Text(
+                'يتم أخذ أصغر للوسط',
+                style: AppStyles.textStyle13M.copyWith(
+                  color: const Color(0xff666666),
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
-            ),
-            SizedBox(
-              height: 30.h,
             ),
             AppButton(
               onPressed: () => PersistentNavBarNavigator.pushNewScreen(
@@ -87,7 +85,10 @@ class MiddleMeasureViewBody extends StatelessWidget {
                 S.of(context).next,
                 style: AppStyles.textStyle18SB.copyWith(color: Colors.white),
               ),
-            )
+            ),
+            SizedBox(
+              height: 30.h,
+            ),
           ],
         ),
       ),
