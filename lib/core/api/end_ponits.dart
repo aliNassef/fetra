@@ -30,17 +30,17 @@ class ApiKey {
   static String age = 'age';
   static String type = 'type';
   static String status = "status";
-   static String email = "email";
+  static String email = "email";
   static String password = "password";
   static String typeAccount = 'type_account';
   static String token = "token";
   static String message = "message";
   static String id = "id";
   static String name = "name";
-  static String phone = "phone"; 
-  static String weight = "weight"; 
-  static String height = "height"; 
-  static String neck = "neck"; 
-  static String middle = "middle"; 
-  static String hip = "hip"; 
-}
+  static String phone = "phone";
+  static String weight = "weight";
+  static String height = "height";
+  static String neck = "neck";
+  static String middle = "middle";
+  static String hip = "hip";
+ }
