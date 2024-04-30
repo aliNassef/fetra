@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -28,6 +27,7 @@ class InputFatBox extends StatelessWidget {
           keyboardType: TextInputType.number,
           contentPadding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 9.h),
           hint: hint,
+          
           hintStyle: AppStyles.textStyle9R,
           input: controller,
           backgroundColor: const Color(0xffFAFAFA),

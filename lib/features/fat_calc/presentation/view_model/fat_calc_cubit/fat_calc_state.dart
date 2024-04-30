@@ -9,8 +9,16 @@ sealed class FatCalcState extends Equatable {
 
 final class FatCalcInitial extends FatCalcState {}
 
-final class SuccessCalculating extends FatCalcState {}
+final class SuccessCalculating extends FatCalcState {
+  final FatCalcModel instance;
 
-final class FailureCalculating extends FatCalcState {}
+  const SuccessCalculating({required this.instance});
+}
+
+final class FailureCalculating extends FatCalcState {
+  final String errMessage;
+
+  const FailureCalculating({required this.errMessage});
+}
 
 final class LoadingCalculating extends FatCalcState {}

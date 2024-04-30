@@ -1,3 +1,8 @@
+import 'package:fetra/core/api/service_locator.dart';
+import 'package:fetra/features/fat_calc/data/repo/fat_calc_repo_impl.dart';
+import 'package:fetra/features/fat_calc/presentation/view_model/fat_calc_cubit/fat_calc_cubit.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../core/shared/widgets/custom_app_bar.dart';
 import '../../../../core/shared/widgets/measure_item.dart';
 import '../../../../generated/l10n.dart';
@@ -19,7 +24,10 @@ class ManFatCalcView extends StatelessWidget {
         ),
         title: S.of(context).fat_calc,
       ),
-      body: const ManFatCalcViewBody(),
+      body: BlocProvider(
+        create: (context) => FatCalcCubit(getIt.get<FatCalcRepoImpl>()),
+        child: const ManFatCalcViewBody(),
+      ),
     );
   }
 }

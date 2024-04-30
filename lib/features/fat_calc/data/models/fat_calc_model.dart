@@ -1,7 +1,7 @@
 class FatCalcModel {
   Data? data;
   String? message;
-  bool? status;
+  int? status;
 
 
   FatCalcModel.fromJson(Map<String, dynamic> json) {
