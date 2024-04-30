@@ -1,14 +1,15 @@
+import 'package:fetra/features/videos/data/models/video_categories.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_styles.dart';
-import '../../view_model/cubit/change_tab_bar_item_cubit.dart';
+import '../../view_model/change_tab_cubit/change_tab_bar_item_cubit.dart';
 
 class CutomTabBar extends StatelessWidget {
-  const CutomTabBar({super.key});
-
+  const CutomTabBar({super.key, required this.instance});
+  final VideoCategoriesModel instance;
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<ChangeTabBarItemCubit, ChangeTabBarItemState>(
@@ -17,7 +18,7 @@ class CutomTabBar extends StatelessWidget {
           height: 40.h,
           child: ListView.builder(
             physics: const BouncingScrollPhysics(),
-            itemCount: 6,
+            itemCount: instance.data!.length,
             scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) {
               return GestureDetector(
@@ -37,7 +38,7 @@ class CutomTabBar extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    'الصحة',
+                    instance.data![index].name!,
                     style: context.read<ChangeTabBarItemCubit>().currentIndex ==
                             index
                         ? AppStyles.textStyle16R

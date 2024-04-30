@@ -1,7 +1,7 @@
 class VideoCategoriesModel {
   List<Data>? data;
   String? message;
-  bool? status;
+  int? status;
 
   VideoCategoriesModel.fromJson(Map<String, dynamic> json) {
     if (json['data'] != null) {
