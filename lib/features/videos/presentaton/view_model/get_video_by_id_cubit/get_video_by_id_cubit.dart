@@ -1,3 +1,4 @@
+import 'package:fetra/features/videos/data/models/video_model.dart';
 import 'package:fetra/features/videos/data/repo/video_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
@@ -11,8 +12,8 @@ class GetVideoByIdCubit extends Cubit<GetVideoByIdState> {
     emit(GetVideoByIdLoading());
     var data = await _videoRepo.getVideosById(type: type);
     data.fold(
-      (l) => emit(GetVideoByIdSuccess()),
-      (r) => emit(GetVideoByIdFailure()),
+      (l) => emit(GetVideoByIdSuccess(videoModel: l)),
+      (r) => emit(GetVideoByIdFailure(errMessage: r)),
     );
   }
 }

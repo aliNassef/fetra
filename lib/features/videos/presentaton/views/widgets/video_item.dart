@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -8,8 +7,9 @@ import '../../../../../core/utils/app_images.dart';
 class VideoItem extends StatelessWidget {
   const VideoItem({
     super.key,
+    required this.img,
   });
-
+  final String img;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,11 +18,9 @@ class VideoItem extends StatelessWidget {
       width: 143.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
-        image: const DecorationImage(
+        image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage(
-            AppImages.videoback,
-          ),
+          image: NetworkImage(img),
         ),
       ),
       child: Container(

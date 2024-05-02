@@ -1,4 +1,5 @@
-import 'package:fetra/features/videos/presentaton/view_model/get_all_video_category_cubit/get_all_video_categories_cubit.dart';
+  import 'package:fetra/features/videos/presentaton/view_model/get_all_video_category_cubit/get_all_video_categories_cubit.dart';
+import 'package:fetra/features/videos/presentaton/view_model/get_video_by_id_cubit/get_video_by_id_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/shared/functions/locale.dart';
@@ -30,7 +31,14 @@ class _VideoViewBodyState extends State<VideoViewBody> {
           SizedBox(
             height: 21.h,
           ),
-          BlocBuilder<GetAllVideoCategoriesCubit, GetAllVideoCategoriesState>(
+          BlocConsumer<GetAllVideoCategoriesCubit, GetAllVideoCategoriesState>(
+            listener: (context, state) {
+              if (state is GetAllVideoCategoriesSuccess) {
+                context.read<GetVideoByIdCubit>().getVideoById(
+                      type: state.videoCategoriesModel.data![0].name.toString(),
+                    );
+              }
+            },
             builder: (context, state) {
               if (state is GetAllVideoCategoriesSuccess) {
                 return CutomTabBar(
@@ -44,7 +52,27 @@ class _VideoViewBodyState extends State<VideoViewBody> {
           SizedBox(
             height: 42.h,
           ),
-          const VideoGridView(),
+          BlocBuilder<GetAllVideoCategoriesCubit, GetAllVideoCategoriesState>(
+            builder: (context, state) {
+              if (state is GetAllVideoCategoriesSuccess) {
+                return BlocBuilder<GetVideoByIdCubit, GetVideoByIdState>(
+                  builder: (context, state) {
+                    if (state is GetVideoByIdSuccess) {
+                      return VideoGridView(
+                        instance: state.videoModel,
+                      );
+                    } else if (state is GetVideoByIdFailure) {
+                      return Center(child: Text(state.errMessage));
+                    } else {
+                      return const CircularProgressIndicator();
+                    }
+                  },
+                );
+              } else {
+                return const CircularProgressIndicator();
+              }
+            },
+          ),
         ],
       ),
     );

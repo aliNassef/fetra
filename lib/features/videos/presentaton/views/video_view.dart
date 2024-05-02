@@ -4,6 +4,7 @@ import 'package:fetra/features/videos/presentaton/view_model/get_all_video_categ
 import 'package:fetra/features/videos/presentaton/view_model/get_video_by_id_cubit/get_video_by_id_cubit.dart';
 
 import '../../../../core/shared/widgets/custom_app_bar.dart';
+import '../view_model/get_video_details_cubit/get_video_details_cubit.dart';
 import 'widgets/video_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,6 +32,10 @@ class VideoView extends StatelessWidget {
               create: (context) => GetVideoByIdCubit(
                 getIt.get<VideoRepoImpl>(),
               ),
+            ),
+            BlocProvider(
+              create: (context) =>
+                  GetVideoDetailsCubit(getIt.get<VideoRepoImpl>(),),
             )
           ],
           child: const VideoViewBody(),

@@ -9,8 +9,16 @@ sealed class GetVideoByIdState extends Equatable {
 
 final class GetVideoByIdInitial extends GetVideoByIdState {}
 
-final class GetVideoByIdSuccess extends GetVideoByIdState {}
+final class GetVideoByIdSuccess extends GetVideoByIdState {
+  final VideoModel videoModel;
 
-final class GetVideoByIdFailure extends GetVideoByIdState {}
+  const GetVideoByIdSuccess({required this.videoModel});
+}
+
+final class GetVideoByIdFailure extends GetVideoByIdState {
+  final String errMessage;
+
+  const GetVideoByIdFailure({required this.errMessage});
+}
 
 final class GetVideoByIdLoading extends GetVideoByIdState {}

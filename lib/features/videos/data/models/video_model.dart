@@ -1,9 +1,9 @@
 class VideoModel {
   List<Data>? data;
   String? message;
-  bool? status;
+  int? status;
 
-  VideoModel.fromJson(Map<String, dynamic> json) {
+  VideoModel.fromJson(dynamic json) {
     if (json['data'] != null) {
       data = <Data>[];
       json['data'].forEach((v) {
