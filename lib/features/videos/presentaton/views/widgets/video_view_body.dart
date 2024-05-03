@@ -1,6 +1,7 @@
 import '../../view_model/get_all_video_category_cubit/get_all_video_categories_cubit.dart';
 import '../../view_model/get_video_by_id_cubit/get_video_by_id_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../../../core/shared/widgets/skelton.dart';
 
 import '../../../../../core/shared/functions/locale.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,24 @@ class _VideoViewBodyState extends State<VideoViewBody> {
                   instance: state.videoCategoriesModel,
                 );
               } else {
-                return const CircularProgressIndicator();
+                return SizedBox(
+                  height: 50.h,
+                  child: ListView.builder(
+                    physics: const BouncingScrollPhysics(),
+                    itemCount: 10,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10.w),
+                        child: Skelton(
+                          height: 50.h,
+                          width: 100.w,
+                          radius: 10.r,
+                        ),
+                      );
+                    },
+                  ),
+                );
               }
             },
           ),

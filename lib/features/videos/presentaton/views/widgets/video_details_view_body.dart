@@ -1,3 +1,6 @@
+import 'package:fetra/features/videos/presentaton/views/widgets/chewei_video.dart';
+import 'package:video_player/video_player.dart';
+
 import '../../view_model/get_video_details_cubit/get_video_details_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
@@ -51,6 +54,13 @@ class VideoDetailsViewBody extends StatelessWidget {
                         : SizedBox(
                             height: MediaQuery.sizeOf(context).height * .2,
                             width: MediaQuery.sizeOf(context).width,
+                            child: ChewieVideo(
+                              videoPlayerController:
+                                  VideoPlayerController.networkUrl(
+                                Uri.parse(state.model.data!.video!),
+                              ),
+                              looping: false,
+                            ),
                           ),
                   ),
                   Text(

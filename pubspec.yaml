@@ -58,6 +58,7 @@ dependencies:
   persistent_bottom_nav_bar: ^5.0.2
   shared_preferences: ^2.2.2
   shimmer: ^3.0.0
+  video_player: ^2.8.6
   youtube_player_flutter: ^9.0.1
 
 dev_dependencies:
