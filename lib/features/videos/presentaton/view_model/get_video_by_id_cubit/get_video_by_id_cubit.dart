@@ -1,5 +1,5 @@
-import 'package:fetra/features/videos/data/models/video_model.dart';
-import 'package:fetra/features/videos/data/repo/video_repo.dart';
+import '../../../data/models/video_model.dart';
+import '../../../data/repo/video_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 

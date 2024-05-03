@@ -1,7 +1,7 @@
-import 'package:fetra/core/api/service_locator.dart';
-import 'package:fetra/features/videos/data/repo/video_repo_impl.dart';
-import 'package:fetra/features/videos/presentaton/view_model/get_all_video_category_cubit/get_all_video_categories_cubit.dart';
-import 'package:fetra/features/videos/presentaton/view_model/get_video_by_id_cubit/get_video_by_id_cubit.dart';
+import '../../../../core/api/service_locator.dart';
+import '../../data/repo/video_repo_impl.dart';
+import '../view_model/get_all_video_category_cubit/get_all_video_categories_cubit.dart';
+import '../view_model/get_video_by_id_cubit/get_video_by_id_cubit.dart';
 
 import '../../../../core/shared/widgets/custom_app_bar.dart';
 import '../view_model/get_video_details_cubit/get_video_details_cubit.dart';

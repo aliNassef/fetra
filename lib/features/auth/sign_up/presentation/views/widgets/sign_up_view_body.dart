@@ -1,4 +1,4 @@
-import 'package:fetra/core/shared/functions/toast_dialog.dart';
+import '../../../../../../core/shared/functions/toast_dialog.dart';
 
 import '../../../../../../core/utils/app_router.dart';
 import '../../view_model/cubit/sign_up_cubit.dart';

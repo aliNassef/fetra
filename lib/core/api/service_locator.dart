@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
- import 'package:fetra/features/fat_calc/data/repo/fat_calc_repo_impl.dart';
-import 'package:fetra/features/videos/data/repo/video_repo_impl.dart';
+import '../../features/fat_calc/data/repo/fat_calc_repo_impl.dart';
+import '../../features/videos/data/repo/video_repo_impl.dart';
 import 'dio_consumer.dart';
 import '../cache/cache_helper.dart';
 import '../../features/articles/data/repo/article_repo_impl.dart';

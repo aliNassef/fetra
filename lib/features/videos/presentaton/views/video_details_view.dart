@@ -1,4 +1,4 @@
-import 'package:fetra/features/videos/presentaton/view_model/get_video_details_cubit/get_video_details_cubit.dart';
+import '../view_model/get_video_details_cubit/get_video_details_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/shared/widgets/custom_app_bar.dart';

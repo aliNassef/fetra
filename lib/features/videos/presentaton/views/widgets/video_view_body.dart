@@ -1,5 +1,5 @@
-  import 'package:fetra/features/videos/presentaton/view_model/get_all_video_category_cubit/get_all_video_categories_cubit.dart';
-import 'package:fetra/features/videos/presentaton/view_model/get_video_by_id_cubit/get_video_by_id_cubit.dart';
+import '../../view_model/get_all_video_category_cubit/get_all_video_categories_cubit.dart';
+import '../../view_model/get_video_by_id_cubit/get_video_by_id_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/shared/functions/locale.dart';

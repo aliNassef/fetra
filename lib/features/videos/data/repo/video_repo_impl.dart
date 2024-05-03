@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
-import 'package:fetra/core/api/api_consumer.dart';
-import 'package:fetra/core/api/end_ponits.dart';
-import 'package:fetra/core/errors/exceptions.dart';
-import 'package:fetra/features/videos/data/models/video_categories.dart';
-import 'package:fetra/features/videos/data/models/video_details_model.dart';
-import 'package:fetra/features/videos/data/models/video_model.dart';
-import 'package:fetra/features/videos/data/repo/video_repo.dart';
+import '../../../../core/api/api_consumer.dart';
+import '../../../../core/api/end_ponits.dart';
+import '../../../../core/errors/exceptions.dart';
+import '../models/video_categories.dart';
+import '../models/video_details_model.dart';
+import '../models/video_model.dart';
+import 'video_repo.dart';
 
 class VideoRepoImpl extends VideoRepo {
   final ApiConsumer api;

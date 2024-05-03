@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
-import 'package:fetra/core/api/api_consumer.dart';
-import 'package:fetra/core/api/end_ponits.dart';
-import 'package:fetra/core/errors/exceptions.dart';
+import '../../../../core/api/api_consumer.dart';
+import '../../../../core/api/end_ponits.dart';
+import '../../../../core/errors/exceptions.dart';
 
-import 'package:fetra/features/fat_calc/data/models/fat_calc_model.dart';
+import '../models/fat_calc_model.dart';
 
 import 'fat_calc_repo.dart';
 

@@ -1,8 +1,9 @@
-import 'package:fetra/features/videos/presentaton/view_model/get_video_details_cubit/get_video_details_cubit.dart';
+import '../../view_model/get_video_details_cubit/get_video_details_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import '../../../../../core/shared/functions/locale.dart';
+import '../../../../../core/utils/app_colors.dart';
 import '../../../../measure/presentation/views/widgets/custom_sub_titles.dart';
-import '../../../../measure/presentation/views/widgets/video_banner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/app_styles.dart';
@@ -26,7 +27,31 @@ class VideoDetailsViewBody extends StatelessWidget {
                   Padding(
                     padding:
                         EdgeInsets.symmetric(horizontal: 9.w, vertical: 30.h),
-                    child: const VideoBanner(),
+                    child: state.model.data!.video == ""
+                        ? SizedBox(
+                            height: MediaQuery.sizeOf(context).height * .2,
+                            width: MediaQuery.sizeOf(context).width,
+                            child: YoutubePlayer(
+                              controller: YoutubePlayerController(
+                                initialVideoId: YoutubePlayer.convertUrlToId(
+                                    state.model.data!.link!)!,
+                                flags: const YoutubePlayerFlags(
+                                  autoPlay: true,
+                                  mute: false,
+                                ),
+                              ),
+                              showVideoProgressIndicator: true,
+                              progressIndicatorColor: AppColors.primaryColor,
+                              progressColors: const ProgressBarColors(
+                                playedColor: AppColors.primarySwatchColor,
+                                handleColor: AppColors.primarySwatchColor,
+                              ),
+                            ),
+                          )
+                        : SizedBox(
+                            height: MediaQuery.sizeOf(context).height * .2,
+                            width: MediaQuery.sizeOf(context).width,
+                          ),
                   ),
                   Text(
                     state.model.data!.name!,

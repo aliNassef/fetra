@@ -1,12 +1,12 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import '../../../../../../core/utils/app_colors.dart';
-import '../../../../../../core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../../core/shared/functions/locale.dart';
- import '../../../../../../generated/l10n.dart';
+import '../../../../../../core/utils/app_colors.dart';
+import '../../../../../../core/utils/app_styles.dart';
+import '../../../../../../generated/l10n.dart';
 import '../../view_model/cubit/sign_up_cubit.dart';
 
 class DropDownGender extends StatelessWidget {

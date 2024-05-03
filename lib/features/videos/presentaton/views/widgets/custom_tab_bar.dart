@@ -1,5 +1,5 @@
-import 'package:fetra/features/videos/data/models/video_categories.dart';
-import 'package:fetra/features/videos/presentaton/view_model/get_video_by_id_cubit/get_video_by_id_cubit.dart';
+import '../../../data/models/video_categories.dart';
+import '../../view_model/get_video_by_id_cubit/get_video_by_id_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

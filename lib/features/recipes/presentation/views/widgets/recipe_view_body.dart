@@ -1,11 +1,11 @@
-import '../../view_model/recipes/recipes_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/shared/functions/locale.dart';
 import '../../../../../core/utils/app_styles.dart';
- import '../../../../../generated/l10n.dart';
+import '../../../../../generated/l10n.dart';
+import '../../view_model/recipes/recipes_cubit.dart';
 import 'recipe_grid_view_loading_data.dart';
 import 'recipes_grid_view.dart';
 

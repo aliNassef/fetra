@@ -1,6 +1,6 @@
-import 'package:fetra/core/api/service_locator.dart';
-import 'package:fetra/features/fat_calc/data/repo/fat_calc_repo_impl.dart';
-import 'package:fetra/features/fat_calc/presentation/view_model/fat_calc_cubit/fat_calc_cubit.dart';
+import '../../../../core/api/service_locator.dart';
+import '../../data/repo/fat_calc_repo_impl.dart';
+import '../view_model/fat_calc_cubit/fat_calc_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/shared/widgets/custom_app_bar.dart';

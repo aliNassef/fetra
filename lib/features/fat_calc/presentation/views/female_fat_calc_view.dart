@@ -1,4 +1,4 @@
-import 'package:fetra/features/fat_calc/presentation/view_model/fat_calc_cubit/fat_calc_cubit.dart';
+import '../view_model/fat_calc_cubit/fat_calc_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/api/service_locator.dart';

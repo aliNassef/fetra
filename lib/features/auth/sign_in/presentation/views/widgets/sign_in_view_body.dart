@@ -3,7 +3,7 @@ import '../../../../../../core/shared/widgets/app_button.dart';
 import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_images.dart';
 import '../../../../../../core/utils/app_styles.dart';
-import 'package:fetra/features/auth/sign_in/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
+import '../../view_model/sign_in_cubit/sign_in_cubit.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,4 +1,4 @@
-import 'package:fetra/features/on_boarding/presentation/views/widgets/on_boarding_view_body.dart';
+import 'widgets/on_boarding_view_body.dart';
 
 import '../../../../core/api/end_ponits.dart';
 import '../../../../core/cache/cache_helper.dart';

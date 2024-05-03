@@ -1,5 +1,5 @@
 
-import 'package:fetra/features/fat_calc/presentation/views/widgets/fat_calc_info.dart';
+import 'fat_calc_info.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

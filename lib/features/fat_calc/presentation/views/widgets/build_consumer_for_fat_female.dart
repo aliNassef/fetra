@@ -1,11 +1,11 @@
 
-import 'package:fetra/core/shared/functions/toast_dialog.dart';
-import 'package:fetra/core/shared/widgets/app_button.dart';
-import 'package:fetra/core/utils/app_colors.dart';
-import 'package:fetra/core/utils/app_styles.dart';
-import 'package:fetra/features/fat_calc/presentation/view_model/fat_calc_cubit/fat_calc_cubit.dart';
-import 'package:fetra/features/fat_calc/presentation/views/widgets/fat_calc_info.dart';
-import 'package:fetra/generated/l10n.dart';
+import '../../../../../core/shared/functions/toast_dialog.dart';
+import '../../../../../core/shared/widgets/app_button.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_styles.dart';
+import '../../view_model/fat_calc_cubit/fat_calc_cubit.dart';
+import 'fat_calc_info.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

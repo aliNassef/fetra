@@ -1,12 +1,13 @@
-import '../../../../../core/utils/app_router.dart';
-import 'article_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../../core/utils/app_router.dart';
 import '../../view_model/get_all_category_cubit/get_all_category_cubit.dart';
 import '../../view_model/get_categry_by_id/get_category_by_id_cubit.dart';
+import 'article_item.dart';
 
 class BuildCustomListViewOfArticles extends StatelessWidget {
   const BuildCustomListViewOfArticles({

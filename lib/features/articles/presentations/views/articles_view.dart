@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../../core/shared/widgets/custom_app_bar.dart';
 import '../../../../generated/l10n.dart';
 import 'widgets/build_custom_list_view_of_articles.dart';
 import 'widgets/build_custom_tab_bar_items.dart';
-import '../../../../core/shared/widgets/custom_app_bar.dart';
 
 class ArticleView extends StatelessWidget {
   const ArticleView({super.key});

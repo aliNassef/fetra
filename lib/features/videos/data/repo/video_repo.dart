@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:fetra/features/videos/data/models/video_model.dart';
+import '../models/video_model.dart';
 
 import '../models/video_categories.dart';
 import '../models/video_details_model.dart';

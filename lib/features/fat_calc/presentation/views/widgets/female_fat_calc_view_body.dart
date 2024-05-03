@@ -1,6 +1,6 @@
- import 'package:fetra/core/utils/app_images.dart';
-import 'package:fetra/features/fat_calc/presentation/view_model/fat_calc_cubit/fat_calc_cubit.dart';
-import 'package:fetra/features/fat_calc/presentation/views/widgets/build_consumer_for_fat_female.dart';
+import '../../../../../core/utils/app_images.dart';
+import '../../view_model/fat_calc_cubit/fat_calc_cubit.dart';
+import 'build_consumer_for_fat_female.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

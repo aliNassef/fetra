@@ -1,4 +1,4 @@
-import 'package:fetra/features/fat_calc/data/repo/fat_calc_repo.dart';
+import '../../../data/repo/fat_calc_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
