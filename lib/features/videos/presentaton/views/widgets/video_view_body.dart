@@ -82,12 +82,80 @@ class _VideoViewBodyState extends State<VideoViewBody> {
                     } else if (state is GetVideoByIdFailure) {
                       return Center(child: Text(state.errMessage));
                     } else {
-                      return const CircularProgressIndicator();
+                      return Expanded(
+                        child: GridView.builder(
+                          physics: const BouncingScrollPhysics(),
+                          itemCount: 10,
+                          padding: EdgeInsets.symmetric(horizontal: 21.w),
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            mainAxisSpacing: 21.h,
+                            crossAxisSpacing: 35.w,
+                          ),
+                          itemBuilder: ((context, index) {
+                            return Directionality(
+                              textDirection: isArabic()
+                                  ? TextDirection.rtl
+                                  : TextDirection.ltr,
+                              child: Column(
+                                children: [
+                                  Skelton(
+                                    height: 133.49.h,
+                                    width: 143.w,
+                                  ),
+                                  const SizedBox(
+                                    height: 6,
+                                  ),
+                                  Skelton(
+                                    height: 22.h,
+                                    width: 100.w,
+                                    radius: 5,
+                                  ),
+                                ],
+                              ),
+                            );
+                          }),
+                        ),
+                      );
                     }
                   },
                 );
               } else {
-                return const CircularProgressIndicator();
+                return Expanded(
+                  child: GridView.builder(
+                    physics: const BouncingScrollPhysics(),
+                    itemCount: 10,
+                    padding: EdgeInsets.symmetric(horizontal: 21.w),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                      mainAxisSpacing: 21.h,
+                      crossAxisSpacing: 35.w,
+                    ),
+                    itemBuilder: ((context, index) {
+                      return Directionality(
+                        textDirection:
+                            isArabic() ? TextDirection.rtl : TextDirection.ltr,
+                        child: Column(
+                          children: [
+                            Skelton(
+                              height: 133.49.h,
+                              width: 143.w,
+                            ),
+                            const SizedBox(
+                              height: 6,
+                            ),
+                            Skelton(
+                              height: 22.h,
+                              width: 100.w,
+                              radius: 5,
+                            ),
+                          ],
+                        ),
+                      );
+                    }),
+                  ),
+                );
               }
             },
           ),

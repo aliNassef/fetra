@@ -1,4 +1,5 @@
 import 'package:fetra/features/videos/presentaton/views/widgets/chewei_video.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:video_player/video_player.dart';
 
 import '../../view_model/get_video_details_cubit/get_video_details_cubit.dart';
@@ -108,7 +109,15 @@ class VideoDetailsViewBody extends StatelessWidget {
             ),
           );
         } else {
-          return const CircularProgressIndicator();
+          return Center(
+            child: SpinKitFadingCircle(
+              itemBuilder: (BuildContext context, int index) {
+                return const DecoratedBox(
+                  decoration: BoxDecoration(color: Color(0xffC4C4C4)),
+                );
+              },
+            ),
+          );
         }
       },
     );
