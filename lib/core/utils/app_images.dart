@@ -39,4 +39,5 @@ abstract class AppImages {
   static const videoback = 'assets/images/video_back.png';
   static const photoProfile = 'assets/images/photo_profile.png';
   static const youtube = 'assets/images/Base_Background_youtube.png';
+  static const userUploadImage = 'assets/images/user_upload_image.svg';
 }

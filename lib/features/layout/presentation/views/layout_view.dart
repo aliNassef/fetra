@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../../../../core/utils/app_images.dart';
+import '../../../profile/presentation/views/profile_view.dart';
 
 class LayOutView extends StatefulWidget {
   const LayOutView({super.key});
@@ -28,7 +29,7 @@ class _LayOutViewState extends State<LayOutView> {
           HomeView(),
           SignInView(),
           SignInView(),
-          SignInView(),
+          ProfileView(),
         ],
 
         items: [

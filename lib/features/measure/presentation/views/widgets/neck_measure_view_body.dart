@@ -1,5 +1,4 @@
-import 'package:flutter/widgets.dart';
-
+ 
 import '../../../../../core/shared/functions/locale.dart';
 import '../../../../../core/shared/widgets/app_button.dart';
 import '../../../../../core/utils/app_colors.dart';
