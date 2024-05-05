@@ -501,6 +501,86 @@ class S {
       args: [],
     );
   }
+
+  /// `معلومات الحساب`
+  String get profile_info {
+    return Intl.message(
+      'معلومات الحساب',
+      name: 'profile_info',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مواعيد النوم`
+  String get sleep_time {
+    return Intl.message(
+      'مواعيد النوم',
+      name: 'sleep_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مواعيد المشي`
+  String get walk_time {
+    return Intl.message(
+      'مواعيد المشي',
+      name: 'walk_time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاشتراكات`
+  String get subscribtions {
+    return Intl.message(
+      'الاشتراكات',
+      name: 'subscribtions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قياساتي`
+  String get my_measurments {
+    return Intl.message(
+      'قياساتي',
+      name: 'my_measurments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اللغة العربية`
+  String get arabic_lang {
+    return Intl.message(
+      'اللغة العربية',
+      name: 'arabic_lang',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اللغة الانجليزية`
+  String get english_lang {
+    return Intl.message(
+      'اللغة الانجليزية',
+      name: 'english_lang',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تسجيل خروج`
+  String get log_out {
+    return Intl.message(
+      'تسجيل خروج',
+      name: 'log_out',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -23,6 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
+        "arabic_lang": MessageLookupByLibrary.simpleMessage("اللغة العربية"),
         "articles": MessageLookupByLibrary.simpleMessage("مقالات"),
         "below_back": MessageLookupByLibrary.simpleMessage("أسفل الظهر"),
         "calc": MessageLookupByLibrary.simpleMessage("احسب"),
@@ -33,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "coaches": MessageLookupByLibrary.simpleMessage("مدربين"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
+        "english_lang":
+            MessageLookupByLibrary.simpleMessage("اللغة الانجليزية"),
         "fat_calc": MessageLookupByLibrary.simpleMessage("قياس الدهون"),
         "female": MessageLookupByLibrary.simpleMessage("مرأة"),
         "forgetpass": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
@@ -40,10 +43,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟"),
         "health": MessageLookupByLibrary.simpleMessage("الصحة"),
         "kilo": MessageLookupByLibrary.simpleMessage("كجم"),
+        "log_out": MessageLookupByLibrary.simpleMessage("تسجيل خروج"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "male": MessageLookupByLibrary.simpleMessage("رجل"),
         "measure": MessageLookupByLibrary.simpleMessage("القياسات"),
         "middle": MessageLookupByLibrary.simpleMessage("الوسط"),
+        "my_measurments": MessageLookupByLibrary.simpleMessage("قياساتي"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "neck": MessageLookupByLibrary.simpleMessage("الرقبة"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
@@ -52,16 +57,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "pass": MessageLookupByLibrary.simpleMessage("كلمة السر"),
         "passCon": MessageLookupByLibrary.simpleMessage("إعادة كلمة السر"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "profile_info": MessageLookupByLibrary.simpleMessage("معلومات الحساب"),
         "recipes": MessageLookupByLibrary.simpleMessage("الوصفات"),
         "recipes_title":
             MessageLookupByLibrary.simpleMessage("وصفات لأطباق السلطة:"),
         "search": MessageLookupByLibrary.simpleMessage("البحث"),
         "sign": MessageLookupByLibrary.simpleMessage("سجل"),
         "signNow": MessageLookupByLibrary.simpleMessage("سجل دخول"),
+        "sleep_time": MessageLookupByLibrary.simpleMessage("مواعيد النوم"),
         "sport": MessageLookupByLibrary.simpleMessage("الرياضة"),
         "start": MessageLookupByLibrary.simpleMessage("إبدأ"),
         "subButton1": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "subButton11": MessageLookupByLibrary.simpleMessage("انشئ حساب"),
+        "subscribtions": MessageLookupByLibrary.simpleMessage("الاشتراكات"),
         "tall": MessageLookupByLibrary.simpleMessage("الطول"),
         "thickness": MessageLookupByLibrary.simpleMessage("النحافة"),
         "title_measure_below_back": MessageLookupByLibrary.simpleMessage(
@@ -72,6 +80,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "طريقة أخذ القياسات الصحيحة للرقبة"),
         "type": MessageLookupByLibrary.simpleMessage("النوع"),
         "videos": MessageLookupByLibrary.simpleMessage("مقاطع الفيديو"),
+        "walk_time": MessageLookupByLibrary.simpleMessage("مواعيد المشي"),
         "weight": MessageLookupByLibrary.simpleMessage("الوزن")
       };
 }

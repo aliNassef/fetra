@@ -9,13 +9,16 @@ import '../../../../../core/utils/app_styles.dart';
 class CustomSignWithGoogleButton extends StatelessWidget {
   const CustomSignWithGoogleButton({
     super.key,
+    required this.title,
+    this.margin,
   });
-
+  final String title;
+  final EdgeInsetsGeometry? margin;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 20.w),
+        margin: margin,
         height: 38.h,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
@@ -27,20 +30,20 @@ class CustomSignWithGoogleButton extends StatelessWidget {
         child: Row(
           children: [
             const Spacer(
-              flex: 1,
+              flex: 6,
+            ),
+            Text(
+              title,
+              style: AppStyles.choiceSignText,
+            ),
+            const Spacer(
+              flex: 4,
             ),
             SvgPicture.asset(
               AppImages.google,
             ),
             const Spacer(
-              flex: 4,
-            ),
-            Text(
-              'المتصفح الرسمي جوجل',
-              style: AppStyles.choiceSignText,
-            ),
-            const Spacer(
-              flex: 6,
+              flex: 2,
             ),
           ],
         ),

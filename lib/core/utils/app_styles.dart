@@ -36,9 +36,9 @@ abstract class AppStyles {
     fontWeight: FontWeight.w500,
     fontFamily: 'Cairo',
   );
-    static final textStyle14SB = TextStyle(
+  static final textStyle14SB = TextStyle(
     fontSize: 14.sp,
-    fontWeight: FontWeight. w600,
+    fontWeight: FontWeight.w600,
     fontFamily: 'Cairo',
   );
   static final authText = TextStyle(
@@ -133,5 +133,11 @@ abstract class AppStyles {
     fontWeight: FontWeight.w500,
     fontFamily: 'Cairo',
     color: Colors.white,
+  );
+  static final textStyle22M = TextStyle(
+    fontSize: 22.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Cairo',
+    color: const Color(0xff4F4F4F),
   );
 }

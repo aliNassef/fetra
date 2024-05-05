@@ -44,7 +44,15 @@
     "sport" : "الرياضة",
     "next" : "التالي",
     "title_measure_middle" : "طريقة أخذ القياسات الصحيحة للوسط",
-    "title_measure_below_back" : "طريقة أخذ القياسات الصحيحة لأسفل الظهر"
+    "title_measure_below_back" : "طريقة أخذ القياسات الصحيحة لأسفل الظهر",
+    "profile_info" : "معلومات الحساب",
+    "sleep_time" : "مواعيد النوم",
+    "walk_time" : "مواعيد المشي",
+    "subscribtions" : "الاشتراكات",
+    "my_measurments" : "قياساتي",
+    "arabic_lang" : "اللغة العربية",
+    "english_lang" : "اللغة الانجليزية",
+    "log_out" : "تسجيل خروج"
 
 
 

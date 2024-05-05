@@ -77,7 +77,10 @@ class ChoiceSignView extends StatelessWidget {
               SizedBox(
                 height: 38.h,
               ),
-              const CustomSignWithGoogleButton()
+              CustomSignWithGoogleButton(
+                title: 'المتصفح الرسمي جوجل',
+                margin: EdgeInsets.symmetric(horizontal: 20.w),
+              ),
             ],
           ),
         ],

@@ -1,3 +1,7 @@
+import 'package:fetra/core/api/service_locator.dart';
+import 'package:fetra/core/cache/cache_helper.dart';
+
+import '../../../../../../core/api/end_ponits.dart';
 import '../../../data/repo/sign_up_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,7 +31,6 @@ class SignUpCubit extends Cubit<SignUpState> {
       age: signUpAge.text,
       phone: signUpPhone.text,
     );
-
     response.fold(
       (l) => emit(FailureSignUp(
         errMessage: l,
@@ -36,5 +39,12 @@ class SignUpCubit extends Cubit<SignUpState> {
         message: r.message!,
       )),
     );
+    getIt.get<CacheHelper>().saveData(key: ApiKey.name, value: signUpname.text);
+    getIt
+        .get<CacheHelper>()
+        .saveData(key: ApiKey.password, value: signUpPass.text);
+    getIt
+        .get<CacheHelper>()
+        .saveData(key: ApiKey.email, value: signUpEmail.text);
   }
 }
