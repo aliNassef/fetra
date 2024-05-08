@@ -10,6 +10,6 @@ class ProfileCubit extends Cubit<ProfileState> {
   uploadImageToProfile(XFile image) async {
     emit(ProfileInitial());
     profilePict = image;
-    emit(UploadImageToProfile());
+    emit(UploadImageToProfile(image: image));
   }
 }

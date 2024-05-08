@@ -8,3 +8,6 @@ sealed class SleepingState extends Equatable {
 }
 
 final class SleepingInitial extends SleepingState {}
+final class SleepingLoading extends SleepingState {}
+final class SleepingSuccess extends SleepingState {}
+final class SleepingFailure extends SleepingState {}

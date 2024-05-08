@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:fetra/features/profile/data/repo/profile_repo_impl.dart';
 import '../../features/fat_calc/data/repo/fat_calc_repo_impl.dart';
 import '../../features/videos/data/repo/video_repo_impl.dart';
 import 'dio_consumer.dart';
@@ -46,8 +47,14 @@ setupGetIt() async {
     FatCalcRepoImpl(
       api: getIt.get<DioConsumer>(),
     ),
-  ); getIt.registerSingleton<VideoRepoImpl>(
+  );
+  getIt.registerSingleton<VideoRepoImpl>(
     VideoRepoImpl(
+      api: getIt.get<DioConsumer>(),
+    ),
+  );
+  getIt.registerSingleton<ProfileRepoImpl>(
+    ProfileRepoImpl(
       api: getIt.get<DioConsumer>(),
     ),
   );

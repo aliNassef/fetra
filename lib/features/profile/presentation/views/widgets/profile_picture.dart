@@ -1,5 +1,8 @@
 import 'dart:io';
 
+import 'package:fetra/features/profile/presentation/view_model/update_image_cubit/update_image_cubit.dart';
+
+import '../../../../../core/shared/functions/upload_image_to_api.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_images.dart';
 import '../../view_model/profilr_cubit/profile_cubit.dart';
@@ -14,7 +17,13 @@ class ProfilePicture extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ProfileCubit, ProfileState>(
+    return BlocConsumer<ProfileCubit, ProfileState>(
+      listener: (context, state) {
+        if (state is UploadImageToProfile) {
+          uploadImageToApi(state.image);
+          context.read<UpdateImageCubit>().updateUserImage(image: state.image);
+        }
+      },
       builder: (context, state) {
         return Center(
           child: InkWell(

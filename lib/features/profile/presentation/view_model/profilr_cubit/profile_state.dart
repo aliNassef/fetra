@@ -8,4 +8,9 @@ sealed class ProfileState extends Equatable {
 }
 
 final class ProfileInitial extends ProfileState {}
-final class UploadImageToProfile extends ProfileState {}
+
+final class UploadImageToProfile extends ProfileState {
+  final XFile image;
+
+  const UploadImageToProfile({required this.image});
+}
