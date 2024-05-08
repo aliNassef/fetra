@@ -1,19 +1,19 @@
 import 'package:equatable/equatable.dart';
 
 class Datum extends Equatable {
-  final int? id;
+  final dynamic id;
   final String? name;
-  final int? unit;
+  final dynamic unit;
   final String? unitCount;
-  final int? mealId;
-  final int? categoryId;
+  final dynamic mealId;
+  final dynamic categoryId;
   final String? mealSystem;
-  final int? weight;
-  final int? protein;
-  final int? fats;
-  final int? fiber;
-  final int? calories;
-  final int? carbs;
+  final dynamic weight;
+  final dynamic protein;
+  final dynamic fats;
+  final dynamic fiber;
+  final dynamic calories;
+  final dynamic carbs;
   final String? img;
 
   const Datum({
@@ -36,16 +36,16 @@ class Datum extends Equatable {
   factory Datum.fromJson(Map<String, dynamic> json) => Datum(
         id: json['id'] as int?,
         name: json['name'] as String?,
-        unit: json['unit'] as int?,
+        unit: json['unit'] as dynamic,
         unitCount: json['unit_count'] as String?,
-        mealId: json['meal_id'] as int?,
-        categoryId: json['category_id'] as int?,
+        mealId: json['meal_id'] as dynamic,
+        categoryId: json['category_id'] as dynamic,
         mealSystem: json['meal_system'] as String?,
-        weight: json['weight'] as int?,
-        protein: json['protein'] as int?,
-        fats: json['fats'] as int?,
-        fiber: json['fiber'] as int?,
-        calories: json['calories'] as int?,
+        weight: json['weight'] as dynamic,
+        protein: json['protein'] as dynamic,
+        fats: json['fats'] as dynamic,
+        fiber: json['fiber'] as dynamic,
+        calories: json['calories'] as dynamic,
         carbs: json['carbs'] as int?,
         img: json['img'] as String?,
       );

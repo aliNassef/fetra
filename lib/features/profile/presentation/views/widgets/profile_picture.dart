@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:fetra/core/utils/app_colors.dart';
-import 'package:fetra/core/utils/app_images.dart';
-import 'package:fetra/features/profile/presentation/view_model/cubit/profile_cubit.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_images.dart';
+import '../../view_model/profilr_cubit/profile_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

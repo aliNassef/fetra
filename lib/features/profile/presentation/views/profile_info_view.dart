@@ -1,4 +1,4 @@
-import 'package:fetra/features/profile/presentation/views/widgets/profile_info_view_body.dart'; 
+import 'widgets/profile_info_view_body.dart';
 import 'package:flutter/material.dart';
  
 

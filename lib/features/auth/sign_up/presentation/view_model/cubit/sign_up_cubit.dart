@@ -1,5 +1,5 @@
-import 'package:fetra/core/api/service_locator.dart';
-import 'package:fetra/core/cache/cache_helper.dart';
+import '../../../../../../core/api/service_locator.dart';
+import '../../../../../../core/cache/cache_helper.dart';
 
 import '../../../../../../core/api/end_ponits.dart';
 import '../../../data/repo/sign_up_repo.dart';

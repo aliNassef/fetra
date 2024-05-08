@@ -52,6 +52,7 @@ class RecipeItem extends StatelessWidget {
               style: AppStyles.titleAuth.copyWith(
                 color: const Color(0xff4F4F4F),
               ),
+              textAlign: TextAlign.center,
             ),
           ],
         ),

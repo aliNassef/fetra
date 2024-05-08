@@ -1,4 +1,4 @@
-import 'package:fetra/features/videos/presentaton/views/widgets/chewei_video.dart';
+import 'chewei_video.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:video_player/video_player.dart';
 

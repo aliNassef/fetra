@@ -1,10 +1,10 @@
-import 'package:fetra/core/api/end_ponits.dart';
-import 'package:fetra/core/api/service_locator.dart';
-import 'package:fetra/core/cache/cache_helper.dart';
-import 'package:fetra/core/utils/app_images.dart';
-import 'package:fetra/core/utils/app_router.dart';
-import 'package:fetra/core/utils/app_styles.dart';
-import 'package:fetra/generated/l10n.dart';
+import '../../../../../core/api/end_ponits.dart';
+import '../../../../../core/api/service_locator.dart';
+import '../../../../../core/cache/cache_helper.dart';
+import '../../../../../core/utils/app_images.dart';
+import '../../../../../core/utils/app_router.dart';
+import '../../../../../core/utils/app_styles.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';

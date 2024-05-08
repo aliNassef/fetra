@@ -1,10 +1,12 @@
-import 'package:fetra/core/shared/functions/locale.dart';
-import 'package:fetra/core/utils/app_styles.dart';
-import 'package:fetra/features/profile/presentation/views/profile_info_view.dart';
-import 'package:fetra/features/profile/presentation/views/widgets/profile_item.dart';
-import 'package:fetra/features/profile/presentation/views/widgets/profile_picture.dart';
-import 'package:fetra/features/profile/presentation/views/widgets/sign_out_button.dart';
-import 'package:fetra/generated/l10n.dart';
+import '../../../../../core/shared/functions/locale.dart';
+import '../../../../../core/utils/app_styles.dart';
+import '../profile_info_view.dart';
+import '../sleeping_view.dart';
+import '../walking_view.dart';
+import 'profile_item.dart';
+import 'profile_picture.dart';
+import 'sign_out_button.dart';
+import '../../../../../generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -47,12 +49,24 @@ class ProfileViewBody extends StatelessWidget {
                 height: 11.h,
               ),
               ProfileItem(
+                onTap: () {
+                  PersistentNavBarNavigator.pushNewScreen(
+                    context,
+                    screen: const SleeepingView(),
+                  );
+                },
                 title: S.of(context).sleep_time,
               ),
               SizedBox(
                 height: 11.h,
               ),
               ProfileItem(
+                onTap: () {
+                  PersistentNavBarNavigator.pushNewScreen(
+                    context,
+                    screen: const WalkingView(),
+                  );
+                },
                 title: S.of(context).walk_time,
               ),
               SizedBox(
