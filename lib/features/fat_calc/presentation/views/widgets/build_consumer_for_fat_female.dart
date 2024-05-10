@@ -1,3 +1,5 @@
+import 'package:fetra/features/meals/presentation/views/meal_view.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import '../../../../../core/shared/functions/toast_dialog.dart';
 import '../../../../../core/shared/widgets/app_button.dart';
@@ -71,7 +73,8 @@ class BuildConsumerForFatFemale extends StatelessWidget {
                     ),
                     FatCalcInfo(
                       text: 'وزن الكتلة اللادهنية',
-                      val: '${state.instance.data!.leanMass} ${S.of(context).cm}',
+                      val:
+                          '${state.instance.data!.leanMass} ${S.of(context).cm}',
                     ),
                     SizedBox(
                       height: 9.h,
@@ -87,6 +90,12 @@ class BuildConsumerForFatFemale extends StatelessWidget {
                 height: 30.h,
               ),
               AppButton(
+                onPressed: () {
+                  PersistentNavBarNavigator.pushNewScreen(
+                    context,
+                    screen: const MealView(),
+                  );
+                },
                 radius: 10.r,
                 backgroundColor: AppColors.primarySwatchColor,
                 text: Padding(
@@ -122,11 +131,9 @@ class BuildConsumerForFatFemale extends StatelessWidget {
                       ? Center(
                           child: SpinKitFadingCircle(
                             size: 30,
-                            itemBuilder:
-                                (BuildContext context, int index) {
+                            itemBuilder: (BuildContext context, int index) {
                               return const DecoratedBox(
-                                decoration:
-                                    BoxDecoration(color: Colors.white),
+                                decoration: BoxDecoration(color: Colors.white),
                               );
                             },
                           ),
@@ -178,6 +185,12 @@ class BuildConsumerForFatFemale extends StatelessWidget {
                 height: 30.h,
               ),
               AppButton(
+                onPressed: () {
+                  PersistentNavBarNavigator.pushNewScreen(
+                    context,
+                    screen: const MealView(),
+                  );
+                },
                 radius: 10.r,
                 backgroundColor: AppColors.primarySwatchColor,
                 text: Padding(

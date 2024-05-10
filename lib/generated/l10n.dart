@@ -581,6 +581,36 @@ class S {
       args: [],
     );
   }
+
+  /// `عدد الوجبات`
+  String get number_meals {
+    return Intl.message(
+      'عدد الوجبات',
+      name: 'number_meals',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `صمم وجباتك`
+  String get design_meals {
+    return Intl.message(
+      'صمم وجباتك',
+      name: 'design_meals',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `السابق`
+  String get pervious {
+    return Intl.message(
+      'السابق',
+      name: 'pervious',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

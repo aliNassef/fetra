@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "cm": MessageLookupByLibrary.simpleMessage("سم"),
         "coaches": MessageLookupByLibrary.simpleMessage("مدربين"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "design_meals": MessageLookupByLibrary.simpleMessage("صمم وجباتك"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "english_lang":
             MessageLookupByLibrary.simpleMessage("اللغة الانجليزية"),
@@ -52,10 +53,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "neck": MessageLookupByLibrary.simpleMessage("الرقبة"),
         "next": MessageLookupByLibrary.simpleMessage("التالي"),
+        "number_meals": MessageLookupByLibrary.simpleMessage("عدد الوجبات"),
         "onBoardingText": MessageLookupByLibrary.simpleMessage(
             "احصل على نظام غذائي للصيام المتقطع"),
         "pass": MessageLookupByLibrary.simpleMessage("كلمة السر"),
         "passCon": MessageLookupByLibrary.simpleMessage("إعادة كلمة السر"),
+        "pervious": MessageLookupByLibrary.simpleMessage("السابق"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "profile_info": MessageLookupByLibrary.simpleMessage("معلومات الحساب"),
         "recipes": MessageLookupByLibrary.simpleMessage("الوصفات"),

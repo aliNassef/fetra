@@ -60,9 +60,19 @@ abstract class AppStyles {
     fontFamily: 'Cairo',
     color: Colors.white,
   );
+  static final textStyle11R = TextStyle(
+    fontSize: 11.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Cairo',
+  );
   static final textStyle16SB = TextStyle(
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
+    fontFamily: 'Cairo',
+  );
+  static final textStyle13M = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w500,
     fontFamily: 'Cairo',
   );
   static final textStyle14R = TextStyle(
@@ -92,11 +102,6 @@ abstract class AppStyles {
   static final textStyle20SB = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w600,
-    fontFamily: 'Cairo',
-  );
-  static final textStyle13M = TextStyle(
-    fontSize: 13.sp,
-    fontWeight: FontWeight.w500,
     fontFamily: 'Cairo',
   );
 

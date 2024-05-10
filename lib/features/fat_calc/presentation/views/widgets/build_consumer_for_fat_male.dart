@@ -1,3 +1,7 @@
+import 'dart:developer';
+
+import 'package:fetra/features/meals/presentation/views/meal_view.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 import 'fat_calc_info.dart';
 import 'package:flutter/material.dart';
@@ -89,6 +93,13 @@ class BuildConsumerForFatMale extends StatelessWidget {
                 height: 30.h,
               ),
               AppButton(
+                onPressed: () {
+                  log('message');
+                  PersistentNavBarNavigator.pushNewScreen(
+                    context,
+                    screen: const MealView(),
+                  );
+                },
                 radius: 10.r,
                 backgroundColor: AppColors.primarySwatchColor,
                 text: Padding(
@@ -178,6 +189,12 @@ class BuildConsumerForFatMale extends StatelessWidget {
                 height: 30.h,
               ),
               AppButton(
+                onPressed: () {
+                  PersistentNavBarNavigator.pushNewScreen(
+                    context,
+                    screen: const MealView(),
+                  );
+                },
                 radius: 10.r,
                 backgroundColor: AppColors.primarySwatchColor,
                 text: Padding(

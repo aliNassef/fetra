@@ -52,7 +52,12 @@
     "my_measurments" : "قياساتي",
     "arabic_lang" : "اللغة العربية",
     "english_lang" : "اللغة الانجليزية",
-    "log_out" : "تسجيل خروج"
+    "log_out" : "تسجيل خروج",
+    "number_meals" : "عدد الوجبات",
+    "design_meals" : "صمم وجباتك",
+    "pervious" : "السابق"
+
+
 
 
 
