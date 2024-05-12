@@ -611,6 +611,16 @@ class S {
       args: [],
     );
   }
+
+  /// `البرنامج الغذائي`
+  String get diet_program {
+    return Intl.message(
+      'البرنامج الغذائي',
+      name: 'diet_program',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:fetra/core/shared/functions/locale.dart';
 import 'package:fetra/core/shared/widgets/app_button.dart';
 import 'package:fetra/core/shared/widgets/drop_down_button.dart';
@@ -14,6 +16,7 @@ class MealViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    TextEditingController numOfMeals = TextEditingController();
     return Directionality(
       textDirection: isArabic() ? TextDirection.rtl : TextDirection.ltr,
       child: Column(
@@ -23,6 +26,14 @@ class MealViewBody extends StatelessWidget {
             height: 27.h,
           ),
           CustomDropDown(
+            onChanged: (val) {
+              numOfMeals.text = val!;
+              log(numOfMeals.text);
+            },
+            onSaved: (val) {
+              numOfMeals.text = val!;
+              log(numOfMeals.text);
+            },
             title: S.of(context).number_meals,
             items: const [
               DropdownMenuItem(
@@ -40,7 +51,9 @@ class MealViewBody extends StatelessWidget {
             onPressed: () {
               PersistentNavBarNavigator.pushNewScreen(
                 context,
-                screen: const DesignMealView(),
+                screen: DesignMealView(
+                  numOfMeals: numOfMeals,
+                ),
               );
             },
             radius: 10,

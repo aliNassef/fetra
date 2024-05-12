@@ -7,9 +7,16 @@ import '../../../../../../core/utils/app_colors.dart';
 import '../../../../../../core/utils/app_styles.dart';
 
 class CustomDropDown extends StatelessWidget {
-  const CustomDropDown({super.key, required this.title, this.items});
+  const CustomDropDown(
+      {super.key,
+      required this.title,
+      this.items,
+      this.onChanged,
+      this.onSaved});
   final String title;
   final List<DropdownMenuItem<String>>? items;
+  final void Function(String?)? onChanged;
+  final void Function(String?)? onSaved;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -47,8 +54,8 @@ class CustomDropDown extends StatelessWidget {
             validator: (value) {
               return null;
             },
-            onChanged: (value) {},
-            onSaved: (value) {},
+            onChanged: onChanged,
+            onSaved: onSaved,
             buttonStyleData: ButtonStyleData(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),

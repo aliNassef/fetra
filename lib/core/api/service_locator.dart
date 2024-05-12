@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:fetra/features/profile/data/repo/profile_repo_impl.dart';
+import 'package:fetra/features/meals/data/repo/meal_repo_impl.dart';
+ import 'package:fetra/features/profile/data/repo/profile_repo_impl.dart';
 import '../../features/fat_calc/data/repo/fat_calc_repo_impl.dart';
 import '../../features/videos/data/repo/video_repo_impl.dart';
 import 'dio_consumer.dart';
@@ -58,4 +59,10 @@ setupGetIt() async {
       api: getIt.get<DioConsumer>(),
     ),
   );
+  getIt.registerSingleton<MealRepoImpl>(
+    MealRepoImpl(
+      api: getIt.get<DioConsumer>(),
+    ),
+  );
+  
 }

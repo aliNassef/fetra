@@ -34,6 +34,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "coaches": MessageLookupByLibrary.simpleMessage("مدربين"),
         "createaccount": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "design_meals": MessageLookupByLibrary.simpleMessage("صمم وجباتك"),
+        "diet_program":
+            MessageLookupByLibrary.simpleMessage("البرنامج الغذائي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الالكترونى"),
         "english_lang":
             MessageLookupByLibrary.simpleMessage("اللغة الانجليزية"),
