@@ -3,14 +3,17 @@ import 'package:fetra/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MealItem extends StatelessWidget {
-  const MealItem({super.key});
+import '../../../data/model/meal_model.dart';
 
+class MealItem extends StatelessWidget {
+  const MealItem({super.key, required this.meal});
+  final Meal meal;
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 18.w),
       height: 78.h,
+      width: MediaQuery.sizeOf(context).width,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -29,7 +32,7 @@ class MealItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'لحم بقري',
+                meal.name!,
                 style: AppStyles.textStyle12R.copyWith(
                   color: const Color(0xff181818),
                 ),
@@ -38,7 +41,7 @@ class MealItem extends StatelessWidget {
                 height: 4.h,
               ),
               Text(
-                'الوزن : 50 كجم',
+                'الوزن :${meal.weight}',
                 style: AppStyles.textStyle11R.copyWith(
                   color: AppColors.primarySwatchColor,
                 ),
@@ -57,7 +60,7 @@ class MealItem extends StatelessWidget {
                 width: 21.w,
               ),
               Text(
-                '2',
+                '${meal.quantity}',
                 style: AppStyles.textStyle18SB.copyWith(
                   color: const Color(0xff06161C),
                 ),
