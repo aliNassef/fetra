@@ -1,6 +1,8 @@
 import 'dart:developer';
+import 'package:fetra/constants.dart';
 import 'package:fetra/core/shared/functions/locale.dart';
 import 'package:fetra/core/shared/widgets/app_button.dart';
+import 'package:fetra/core/shared/widgets/skelton.dart';
 import 'package:fetra/core/utils/app_colors.dart';
 import 'package:fetra/core/utils/app_styles.dart';
 import 'package:fetra/features/meals/presentation/view_model/get_meal_cubit/get_meal_cubit.dart';
@@ -71,6 +73,9 @@ class _DesignMealViewBodyState extends State<DesignMealViewBody> {
                           physics: const BouncingScrollPhysics(),
                           itemBuilder: (context, index) {
                             return MealItem(
+                              currentPage:
+                                  context.read<MealCubit>().currentPage,
+                              model: state.model,
                               meal: context.read<MealCubit>().currentPage == 1
                                   ? state.model.data!.meal1![index]
                                   : context.read<MealCubit>().currentPage == 2
@@ -117,6 +122,65 @@ class _DesignMealViewBodyState extends State<DesignMealViewBody> {
                                 Expanded(
                                   child: AppButton(
                                     onPressed: () {
+                                      if (context
+                                              .read<MealCubit>()
+                                              .currentPage ==
+                                          int.parse(widget.numOfMeals.text)) {
+                                        for (int i = 0;
+                                            i < state.model.data!.meal1!.length;
+                                            i++) {
+                                          if (state.model.data!.meal1![i]
+                                                  .quantity >
+                                              0) {
+                                            AppConstants.meals.add(
+                                              {
+                                                'food_id': state
+                                                    .model.data!.meal1![i].id,
+                                                "quantity": state.model.data!
+                                                    .meal1![i].quantity,
+                                              },
+                                            );
+                                          }
+                                        }
+                                        for (int i = 0;
+                                            i < state.model.data!.meal2!.length;
+                                            i++) {
+                                          if (state.model.data!.meal2![i]
+                                                  .quantity >
+                                              0) {
+                                            AppConstants.meals.add(
+                                              {
+                                                'food_id': state
+                                                    .model.data!.meal2![i].id,
+                                                "quantity": state.model.data!
+                                                    .meal2![i].quantity,
+                                              },
+                                            );
+                                          }
+                                        }
+                                        if (int.parse(widget.numOfMeals.text) ==
+                                            3) {
+                                          for (int i = 0;
+                                              i <
+                                                  state.model.data!.meal3!
+                                                      .length;
+                                              i++) {
+                                            if (state.model.data!.meal3![i]
+                                                    .quantity >
+                                                0) {
+                                              AppConstants.meals.add(
+                                                {
+                                                  'food_id': state
+                                                      .model.data!.meal3![i].id,
+                                                  "quantity": state.model.data!
+                                                      .meal3![i].quantity,
+                                                },
+                                              );
+                                            }
+                                          }
+                                        }
+                                      }
+                                      log(AppConstants.meals.length.toString());
                                       context.read<MealCubit>().goToNextPage(
                                             int.parse(
                                               widget.numOfMeals.text,
@@ -171,7 +235,51 @@ class _DesignMealViewBodyState extends State<DesignMealViewBody> {
                     ],
                   );
                 } else {
-                  return const CircularProgressIndicator();
+                  return Directionality(
+                    textDirection:
+                        isArabic() ? TextDirection.rtl : TextDirection.ltr,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SizedBox(
+                          height: 38.h,
+                        ),
+                        Skelton(
+                          radius: 10,
+                          height: 40.h,
+                          width: 80.w,
+                        ),
+                        SizedBox(
+                          height: 20.h,
+                        ),
+                        Skelton(
+                          radius: 10,
+                          height: 40.h,
+                          width: 80.w,
+                        ),
+                        SizedBox(
+                          height: 19.h,
+                        ),
+                        Expanded(
+                          child: ListView.separated(
+                            itemBuilder: (context, index) {
+                              return Skelton(
+                                height: 60.h,
+                                width: 120.w,
+                                radius: 10,
+                              );
+                            },
+                            separatorBuilder: (context, index) {
+                              return SizedBox(
+                                height: 12.h,
+                              );
+                            },
+                            itemCount: 10,
+                          ),
+                        )
+                      ],
+                    ),
+                  );
                 }
               },
             );
