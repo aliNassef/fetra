@@ -56,8 +56,8 @@ features/
 ```
 
 Each feature follows a clean architecture pattern with:
-- `data/`: Data layer (repositories, models, data sources)
-- `presentation/`: UI layer (screens, widgets, controllers)
+- `data/`: Data layer (repositories, models)
+- `presentation/`: UI layer (view, view model)
 
 ## Internationalization
 
@@ -93,9 +93,9 @@ l10n/
 
 - **Framework**: Flutter
 - **Language**: Dart
-- **State Management**: [Specify your state management solution]
+- **State Management**: [Bloc (cubit)]
 - **Networking**: Dio with custom interceptors
-- **Local Storage**: [Specify your local storage solution]
+- **Local Storage**: [shared prefrence & secure storage]
 - **Design**: Material Design
 
 ## Assets
